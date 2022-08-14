@@ -4,6 +4,9 @@ package  messageId;
 
 option go_package="/attribute";
 
+option csharp_namespace = "attributeG";
+
+
 
 //daily update attribute
 enum AttributeDaily{

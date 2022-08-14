@@ -3,6 +3,9 @@ syntax = "proto3";
 package player;
 option go_package="/player";
 
+option csharp_namespace = "playerG";
+
+
 message CSCreateUser{
   string  UserName=1;
   string  Password=2;
