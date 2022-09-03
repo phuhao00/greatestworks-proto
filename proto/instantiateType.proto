@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package  instantiateTypeG;
+package  instantiateType;
 
-option go_package="/instantiateType";
+option go_package="github.com/phuhao00/greatestworks-proto/gen/instantiateType;instantiateType";
 
 option csharp_namespace = "instantiateTypeG";
 

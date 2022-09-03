@@ -2,11 +2,12 @@
 // versions:
 // 	protoc-gen-go v1.26.0
 // 	protoc        v3.17.3
-// source: proto/player.proto
+// source: player.proto
 
 package player
 
 import (
+	attribute "github.com/phuhao00/greatestworks-proto/gen/attribute"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -32,7 +33,7 @@ type CSCreateUser struct {
 func (x *CSCreateUser) Reset() {
 	*x = CSCreateUser{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[0]
+		mi := &file_player_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -45,7 +46,7 @@ func (x *CSCreateUser) String() string {
 func (*CSCreateUser) ProtoMessage() {}
 
 func (x *CSCreateUser) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[0]
+	mi := &file_player_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -58,7 +59,7 @@ func (x *CSCreateUser) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CSCreateUser.ProtoReflect.Descriptor instead.
 func (*CSCreateUser) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{0}
+	return file_player_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CSCreateUser) GetUserName() string {
@@ -84,7 +85,7 @@ type SCCreateUser struct {
 func (x *SCCreateUser) Reset() {
 	*x = SCCreateUser{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[1]
+		mi := &file_player_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -97,7 +98,7 @@ func (x *SCCreateUser) String() string {
 func (*SCCreateUser) ProtoMessage() {}
 
 func (x *SCCreateUser) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[1]
+	mi := &file_player_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -110,7 +111,7 @@ func (x *SCCreateUser) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SCCreateUser.ProtoReflect.Descriptor instead.
 func (*SCCreateUser) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{1}
+	return file_player_proto_rawDescGZIP(), []int{1}
 }
 
 type CSLogin struct {
@@ -125,7 +126,7 @@ type CSLogin struct {
 func (x *CSLogin) Reset() {
 	*x = CSLogin{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[2]
+		mi := &file_player_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -138,7 +139,7 @@ func (x *CSLogin) String() string {
 func (*CSLogin) ProtoMessage() {}
 
 func (x *CSLogin) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[2]
+	mi := &file_player_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -151,7 +152,7 @@ func (x *CSLogin) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CSLogin.ProtoReflect.Descriptor instead.
 func (*CSLogin) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{2}
+	return file_player_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *CSLogin) GetUserName() string {
@@ -179,7 +180,7 @@ type SCLogin struct {
 func (x *SCLogin) Reset() {
 	*x = SCLogin{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[3]
+		mi := &file_player_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -192,7 +193,7 @@ func (x *SCLogin) String() string {
 func (*SCLogin) ProtoMessage() {}
 
 func (x *SCLogin) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[3]
+	mi := &file_player_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -205,7 +206,7 @@ func (x *SCLogin) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SCLogin.ProtoReflect.Descriptor instead.
 func (*SCLogin) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{3}
+	return file_player_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *SCLogin) GetOk() bool {
@@ -226,7 +227,7 @@ type CSAddFriend struct {
 func (x *CSAddFriend) Reset() {
 	*x = CSAddFriend{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[4]
+		mi := &file_player_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -239,7 +240,7 @@ func (x *CSAddFriend) String() string {
 func (*CSAddFriend) ProtoMessage() {}
 
 func (x *CSAddFriend) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[4]
+	mi := &file_player_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -252,7 +253,7 @@ func (x *CSAddFriend) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CSAddFriend.ProtoReflect.Descriptor instead.
 func (*CSAddFriend) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{4}
+	return file_player_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CSAddFriend) GetUId() uint64 {
@@ -273,7 +274,7 @@ type SCAddFriend struct {
 func (x *SCAddFriend) Reset() {
 	*x = SCAddFriend{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[5]
+		mi := &file_player_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -286,7 +287,7 @@ func (x *SCAddFriend) String() string {
 func (*SCAddFriend) ProtoMessage() {}
 
 func (x *SCAddFriend) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[5]
+	mi := &file_player_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -299,7 +300,7 @@ func (x *SCAddFriend) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SCAddFriend.ProtoReflect.Descriptor instead.
 func (*SCAddFriend) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{5}
+	return file_player_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *SCAddFriend) GetDesc() string {
@@ -320,7 +321,7 @@ type CSDelFriend struct {
 func (x *CSDelFriend) Reset() {
 	*x = CSDelFriend{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[6]
+		mi := &file_player_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -333,7 +334,7 @@ func (x *CSDelFriend) String() string {
 func (*CSDelFriend) ProtoMessage() {}
 
 func (x *CSDelFriend) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[6]
+	mi := &file_player_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -346,7 +347,7 @@ func (x *CSDelFriend) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CSDelFriend.ProtoReflect.Descriptor instead.
 func (*CSDelFriend) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{6}
+	return file_player_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *CSDelFriend) GetUId() uint64 {
@@ -367,7 +368,7 @@ type SCDelFriend struct {
 func (x *SCDelFriend) Reset() {
 	*x = SCDelFriend{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[7]
+		mi := &file_player_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -380,7 +381,7 @@ func (x *SCDelFriend) String() string {
 func (*SCDelFriend) ProtoMessage() {}
 
 func (x *SCDelFriend) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[7]
+	mi := &file_player_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -393,7 +394,7 @@ func (x *SCDelFriend) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SCDelFriend.ProtoReflect.Descriptor instead.
 func (*SCDelFriend) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{7}
+	return file_player_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *SCDelFriend) GetDesc() string {
@@ -417,7 +418,7 @@ type CSSendChatMsg struct {
 func (x *CSSendChatMsg) Reset() {
 	*x = CSSendChatMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[8]
+		mi := &file_player_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -430,7 +431,7 @@ func (x *CSSendChatMsg) String() string {
 func (*CSSendChatMsg) ProtoMessage() {}
 
 func (x *CSSendChatMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[8]
+	mi := &file_player_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -443,7 +444,7 @@ func (x *CSSendChatMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CSSendChatMsg.ProtoReflect.Descriptor instead.
 func (*CSSendChatMsg) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{8}
+	return file_player_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *CSSendChatMsg) GetUId() uint64 {
@@ -476,7 +477,7 @@ type SCSendChatMsg struct {
 func (x *SCSendChatMsg) Reset() {
 	*x = SCSendChatMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[9]
+		mi := &file_player_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -489,7 +490,7 @@ func (x *SCSendChatMsg) String() string {
 func (*SCSendChatMsg) ProtoMessage() {}
 
 func (x *SCSendChatMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[9]
+	mi := &file_player_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -502,7 +503,7 @@ func (x *SCSendChatMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SCSendChatMsg.ProtoReflect.Descriptor instead.
 func (*SCSendChatMsg) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{9}
+	return file_player_proto_rawDescGZIP(), []int{9}
 }
 
 type ChatMessage struct {
@@ -517,7 +518,7 @@ type ChatMessage struct {
 func (x *ChatMessage) Reset() {
 	*x = ChatMessage{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_player_proto_msgTypes[10]
+		mi := &file_player_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -530,7 +531,7 @@ func (x *ChatMessage) String() string {
 func (*ChatMessage) ProtoMessage() {}
 
 func (x *ChatMessage) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_player_proto_msgTypes[10]
+	mi := &file_player_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -543,7 +544,7 @@ func (x *ChatMessage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ChatMessage.ProtoReflect.Descriptor instead.
 func (*ChatMessage) Descriptor() ([]byte, []int) {
-	return file_proto_player_proto_rawDescGZIP(), []int{10}
+	return file_player_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *ChatMessage) GetContent() string {
@@ -560,88 +561,145 @@ func (x *ChatMessage) GetExtra() [][]byte {
 	return nil
 }
 
-var File_proto_player_proto protoreflect.FileDescriptor
+type Test struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
 
-var file_proto_player_proto_rawDesc = []byte{
-	0x0a, 0x12, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x07, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x22, 0x46, 0x0a,
-	0x0c, 0x43, 0x53, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x1a, 0x0a,
-	0x08, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x08, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x61, 0x73,
-	0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x50, 0x61, 0x73,
-	0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x0e, 0x0a, 0x0c, 0x53, 0x43, 0x43, 0x72, 0x65, 0x61, 0x74,
-	0x65, 0x55, 0x73, 0x65, 0x72, 0x22, 0x41, 0x0a, 0x07, 0x43, 0x53, 0x4c, 0x6f, 0x67, 0x69, 0x6e,
-	0x12, 0x1a, 0x0a, 0x08, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x55, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08,
-	0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
-	0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22, 0x19, 0x0a, 0x07, 0x53, 0x43, 0x4c, 0x6f,
-	0x67, 0x69, 0x6e, 0x12, 0x0e, 0x0a, 0x02, 0x4f, 0x6b, 0x18, 0x02, 0x20, 0x01, 0x28, 0x08, 0x52,
-	0x02, 0x4f, 0x6b, 0x22, 0x1f, 0x0a, 0x0b, 0x43, 0x53, 0x41, 0x64, 0x64, 0x46, 0x72, 0x69, 0x65,
-	0x6e, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x55, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52,
-	0x03, 0x55, 0x49, 0x64, 0x22, 0x21, 0x0a, 0x0b, 0x53, 0x43, 0x41, 0x64, 0x64, 0x46, 0x72, 0x69,
-	0x65, 0x6e, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x44, 0x65, 0x73, 0x63, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x04, 0x44, 0x65, 0x73, 0x63, 0x22, 0x1f, 0x0a, 0x0b, 0x43, 0x53, 0x44, 0x65, 0x6c,
-	0x46, 0x72, 0x69, 0x65, 0x6e, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x55, 0x49, 0x64, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x04, 0x52, 0x03, 0x55, 0x49, 0x64, 0x22, 0x21, 0x0a, 0x0b, 0x53, 0x43, 0x44, 0x65,
-	0x6c, 0x46, 0x72, 0x69, 0x65, 0x6e, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x44, 0x65, 0x73, 0x63, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x44, 0x65, 0x73, 0x63, 0x22, 0x65, 0x0a, 0x0d, 0x43,
-	0x53, 0x53, 0x65, 0x6e, 0x64, 0x43, 0x68, 0x61, 0x74, 0x4d, 0x73, 0x67, 0x12, 0x10, 0x0a, 0x03,
-	0x55, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x03, 0x55, 0x49, 0x64, 0x12, 0x26,
-	0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x14, 0x2e, 0x70, 0x6c,
-	0x61, 0x79, 0x65, 0x72, 0x47, 0x2e, 0x43, 0x68, 0x61, 0x74, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67,
-	0x65, 0x52, 0x03, 0x6d, 0x73, 0x67, 0x12, 0x1a, 0x0a, 0x08, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f,
-	0x72, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x08, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f,
-	0x72, 0x79, 0x22, 0x0f, 0x0a, 0x0d, 0x53, 0x43, 0x53, 0x65, 0x6e, 0x64, 0x43, 0x68, 0x61, 0x74,
-	0x4d, 0x73, 0x67, 0x22, 0x3d, 0x0a, 0x0b, 0x43, 0x68, 0x61, 0x74, 0x4d, 0x65, 0x73, 0x73, 0x61,
-	0x67, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x07, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x12, 0x14, 0x0a, 0x05,
-	0x65, 0x78, 0x74, 0x72, 0x61, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0c, 0x52, 0x05, 0x65, 0x78, 0x74,
-	0x72, 0x61, 0x42, 0x13, 0x5a, 0x07, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0xaa, 0x02, 0x07,
-	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	T *attribute.TestImport `protobuf:"bytes,1,opt,name=t,proto3" json:"t,omitempty"`
+}
+
+func (x *Test) Reset() {
+	*x = Test{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_player_proto_msgTypes[11]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Test) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Test) ProtoMessage() {}
+
+func (x *Test) ProtoReflect() protoreflect.Message {
+	mi := &file_player_proto_msgTypes[11]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Test.ProtoReflect.Descriptor instead.
+func (*Test) Descriptor() ([]byte, []int) {
+	return file_player_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *Test) GetT() *attribute.TestImport {
+	if x != nil {
+		return x.T
+	}
+	return nil
+}
+
+var File_player_proto protoreflect.FileDescriptor
+
+var file_player_proto_rawDesc = []byte{
+	0x0a, 0x0c, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x06,
+	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x1a, 0x0f, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74,
+	0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x46, 0x0a, 0x0c, 0x43, 0x53, 0x43, 0x72, 0x65,
+	0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x12, 0x1a, 0x0a, 0x08, 0x55, 0x73, 0x65, 0x72, 0x4e,
+	0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x55, 0x73, 0x65, 0x72, 0x4e,
+	0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x22,
+	0x0e, 0x0a, 0x0c, 0x53, 0x43, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x22,
+	0x41, 0x0a, 0x07, 0x43, 0x53, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12, 0x1a, 0x0a, 0x08, 0x55, 0x73,
+	0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x55, 0x73,
+	0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x61, 0x73, 0x73, 0x77, 0x6f,
+	0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x50, 0x61, 0x73, 0x73, 0x77, 0x6f,
+	0x72, 0x64, 0x22, 0x19, 0x0a, 0x07, 0x53, 0x43, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12, 0x0e, 0x0a,
+	0x02, 0x4f, 0x6b, 0x18, 0x02, 0x20, 0x01, 0x28, 0x08, 0x52, 0x02, 0x4f, 0x6b, 0x22, 0x1f, 0x0a,
+	0x0b, 0x43, 0x53, 0x41, 0x64, 0x64, 0x46, 0x72, 0x69, 0x65, 0x6e, 0x64, 0x12, 0x10, 0x0a, 0x03,
+	0x55, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x03, 0x55, 0x49, 0x64, 0x22, 0x21,
+	0x0a, 0x0b, 0x53, 0x43, 0x41, 0x64, 0x64, 0x46, 0x72, 0x69, 0x65, 0x6e, 0x64, 0x12, 0x12, 0x0a,
+	0x04, 0x44, 0x65, 0x73, 0x63, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x44, 0x65, 0x73,
+	0x63, 0x22, 0x1f, 0x0a, 0x0b, 0x43, 0x53, 0x44, 0x65, 0x6c, 0x46, 0x72, 0x69, 0x65, 0x6e, 0x64,
+	0x12, 0x10, 0x0a, 0x03, 0x55, 0x49, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x03, 0x55,
+	0x49, 0x64, 0x22, 0x21, 0x0a, 0x0b, 0x53, 0x43, 0x44, 0x65, 0x6c, 0x46, 0x72, 0x69, 0x65, 0x6e,
+	0x64, 0x12, 0x12, 0x0a, 0x04, 0x44, 0x65, 0x73, 0x63, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x44, 0x65, 0x73, 0x63, 0x22, 0x64, 0x0a, 0x0d, 0x43, 0x53, 0x53, 0x65, 0x6e, 0x64, 0x43,
+	0x68, 0x61, 0x74, 0x4d, 0x73, 0x67, 0x12, 0x10, 0x0a, 0x03, 0x55, 0x49, 0x64, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x04, 0x52, 0x03, 0x55, 0x49, 0x64, 0x12, 0x25, 0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x43,
+	0x68, 0x61, 0x74, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x52, 0x03, 0x6d, 0x73, 0x67, 0x12,
+	0x1a, 0x0a, 0x08, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72, 0x79, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x05, 0x52, 0x08, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72, 0x79, 0x22, 0x0f, 0x0a, 0x0d, 0x53,
+	0x43, 0x53, 0x65, 0x6e, 0x64, 0x43, 0x68, 0x61, 0x74, 0x4d, 0x73, 0x67, 0x22, 0x3d, 0x0a, 0x0b,
+	0x43, 0x68, 0x61, 0x74, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x43,
+	0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x43, 0x6f,
+	0x6e, 0x74, 0x65, 0x6e, 0x74, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x78, 0x74, 0x72, 0x61, 0x18, 0x02,
+	0x20, 0x03, 0x28, 0x0c, 0x52, 0x05, 0x65, 0x78, 0x74, 0x72, 0x61, 0x22, 0x2b, 0x0a, 0x04, 0x54,
+	0x65, 0x73, 0x74, 0x12, 0x23, 0x0a, 0x01, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x15,
+	0x2e, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x2e, 0x54, 0x65, 0x73, 0x74, 0x49,
+	0x6d, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x01, 0x74, 0x42, 0x45, 0x5a, 0x39, 0x67, 0x69, 0x74, 0x68,
+	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x70, 0x68, 0x75, 0x68, 0x61, 0x6f, 0x30, 0x30, 0x2f,
+	0x67, 0x72, 0x65, 0x61, 0x74, 0x65, 0x73, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x73, 0x2d, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x3b, 0x70,
+	0x6c, 0x61, 0x79, 0x65, 0x72, 0xaa, 0x02, 0x07, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_proto_player_proto_rawDescOnce sync.Once
-	file_proto_player_proto_rawDescData = file_proto_player_proto_rawDesc
+	file_player_proto_rawDescOnce sync.Once
+	file_player_proto_rawDescData = file_player_proto_rawDesc
 )
 
-func file_proto_player_proto_rawDescGZIP() []byte {
-	file_proto_player_proto_rawDescOnce.Do(func() {
-		file_proto_player_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_player_proto_rawDescData)
+func file_player_proto_rawDescGZIP() []byte {
+	file_player_proto_rawDescOnce.Do(func() {
+		file_player_proto_rawDescData = protoimpl.X.CompressGZIP(file_player_proto_rawDescData)
 	})
-	return file_proto_player_proto_rawDescData
+	return file_player_proto_rawDescData
 }
 
-var file_proto_player_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
-var file_proto_player_proto_goTypes = []interface{}{
-	(*CSCreateUser)(nil),  // 0: playerG.CSCreateUser
-	(*SCCreateUser)(nil),  // 1: playerG.SCCreateUser
-	(*CSLogin)(nil),       // 2: playerG.CSLogin
-	(*SCLogin)(nil),       // 3: playerG.SCLogin
-	(*CSAddFriend)(nil),   // 4: playerG.CSAddFriend
-	(*SCAddFriend)(nil),   // 5: playerG.SCAddFriend
-	(*CSDelFriend)(nil),   // 6: playerG.CSDelFriend
-	(*SCDelFriend)(nil),   // 7: playerG.SCDelFriend
-	(*CSSendChatMsg)(nil), // 8: playerG.CSSendChatMsg
-	(*SCSendChatMsg)(nil), // 9: playerG.SCSendChatMsg
-	(*ChatMessage)(nil),   // 10: playerG.ChatMessage
+var file_player_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_player_proto_goTypes = []interface{}{
+	(*CSCreateUser)(nil),         // 0: player.CSCreateUser
+	(*SCCreateUser)(nil),         // 1: player.SCCreateUser
+	(*CSLogin)(nil),              // 2: player.CSLogin
+	(*SCLogin)(nil),              // 3: player.SCLogin
+	(*CSAddFriend)(nil),          // 4: player.CSAddFriend
+	(*SCAddFriend)(nil),          // 5: player.SCAddFriend
+	(*CSDelFriend)(nil),          // 6: player.CSDelFriend
+	(*SCDelFriend)(nil),          // 7: player.SCDelFriend
+	(*CSSendChatMsg)(nil),        // 8: player.CSSendChatMsg
+	(*SCSendChatMsg)(nil),        // 9: player.SCSendChatMsg
+	(*ChatMessage)(nil),          // 10: player.ChatMessage
+	(*Test)(nil),                 // 11: player.Test
+	(*attribute.TestImport)(nil), // 12: attribute.TestImport
 }
-var file_proto_player_proto_depIdxs = []int32{
-	10, // 0: playerG.CSSendChatMsg.msg:type_name -> playerG.ChatMessage
-	1,  // [1:1] is the sub-list for method output_type
-	1,  // [1:1] is the sub-list for method input_type
-	1,  // [1:1] is the sub-list for extension type_name
-	1,  // [1:1] is the sub-list for extension extendee
-	0,  // [0:1] is the sub-list for field type_name
+var file_player_proto_depIdxs = []int32{
+	10, // 0: player.CSSendChatMsg.msg:type_name -> player.ChatMessage
+	12, // 1: player.Test.t:type_name -> attribute.TestImport
+	2,  // [2:2] is the sub-list for method output_type
+	2,  // [2:2] is the sub-list for method input_type
+	2,  // [2:2] is the sub-list for extension type_name
+	2,  // [2:2] is the sub-list for extension extendee
+	0,  // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_proto_player_proto_init() }
-func file_proto_player_proto_init() {
-	if File_proto_player_proto != nil {
+func init() { file_player_proto_init() }
+func file_player_proto_init() {
+	if File_player_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_proto_player_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CSCreateUser); i {
 			case 0:
 				return &v.state
@@ -653,7 +711,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SCCreateUser); i {
 			case 0:
 				return &v.state
@@ -665,7 +723,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CSLogin); i {
 			case 0:
 				return &v.state
@@ -677,7 +735,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SCLogin); i {
 			case 0:
 				return &v.state
@@ -689,7 +747,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CSAddFriend); i {
 			case 0:
 				return &v.state
@@ -701,7 +759,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SCAddFriend); i {
 			case 0:
 				return &v.state
@@ -713,7 +771,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CSDelFriend); i {
 			case 0:
 				return &v.state
@@ -725,7 +783,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SCDelFriend); i {
 			case 0:
 				return &v.state
@@ -737,7 +795,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CSSendChatMsg); i {
 			case 0:
 				return &v.state
@@ -749,7 +807,7 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SCSendChatMsg); i {
 			case 0:
 				return &v.state
@@ -761,8 +819,20 @@ func file_proto_player_proto_init() {
 				return nil
 			}
 		}
-		file_proto_player_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_player_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ChatMessage); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_player_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Test); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -778,18 +848,18 @@ func file_proto_player_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_proto_player_proto_rawDesc,
+			RawDescriptor: file_player_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   11,
+			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_player_proto_goTypes,
-		DependencyIndexes: file_proto_player_proto_depIdxs,
-		MessageInfos:      file_proto_player_proto_msgTypes,
+		GoTypes:           file_player_proto_goTypes,
+		DependencyIndexes: file_player_proto_depIdxs,
+		MessageInfos:      file_player_proto_msgTypes,
 	}.Build()
-	File_proto_player_proto = out.File
-	file_proto_player_proto_rawDesc = nil
-	file_proto_player_proto_goTypes = nil
-	file_proto_player_proto_depIdxs = nil
+	File_player_proto = out.File
+	file_player_proto_rawDesc = nil
+	file_player_proto_goTypes = nil
+	file_player_proto_depIdxs = nil
 }

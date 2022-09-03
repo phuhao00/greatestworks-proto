@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package  attributeG;
+package  attribute;
 
-option go_package="/attribute";
+option go_package="github.com/phuhao00/greatestworks-proto/gen/attribute;attribute";
 
 option csharp_namespace = "attributeG";
 
@@ -26,4 +26,8 @@ enum AttributeMonthly{
 //once update attribute
 enum AttributeOnce{
   NoneOnce=0;
+}
+
+message TestImport{
+
 }
