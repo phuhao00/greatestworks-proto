@@ -1,0 +1,36 @@
+syntax = "proto3";
+package ""
+message LoginData{
+ uint32 Result=1;
+ uint64 UserID=2;
+ string Token=3;
+ string SessionID=4;
+ int32 SceneID=5;
+ string CdKey=6;
+ string IP=7;
+ int32 Port=8;
+ int32 ZoneId=9;
+ string Reason=10;
+ int64 ExpTime=11;                      
+ int32 BusyLevel=12;
+ int32 BusyWaitTime=13;
+ int64 ServerTime=14;
+ int64 RegRegTimeEnd=15;
+ bool IsPreReged=16;
+ bool IsGetShareRewards=17;
+ int64 ServerOpenTime=18;
+ bool IsIpInWhiteList=19;
+ string ShuShuGameID=20;
+ int64 RegRegTimeStart=21;
+ repeated WorldSvrInfo WorldList=22;
+ repeated  WorldSvrInfo RecommendWorld=23;
+ repeated  ZoneInfo ZoneList=24;
+}
+
+message WorldSvrInfo {
+
+}
+
+message ZoneInfo{
+
+}
