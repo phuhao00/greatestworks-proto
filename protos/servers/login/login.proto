@@ -1,5 +1,9 @@
 syntax = "proto3";
-package ""
+
+package login;
+
+option go_package="./;login";
+
 message LoginData{
  uint32 Result=1;
  uint64 UserID=2;
