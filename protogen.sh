@@ -55,5 +55,6 @@ function getdir(){
 
 getdir $root_dir
 
-exec cp -r protos/github.com/phuhao00/greatestworks-proto/*  ./
+ cp -r protos/github.com/phuhao00/greatestworks-proto/*  ./
 
+ rm -rf protos/github.com
