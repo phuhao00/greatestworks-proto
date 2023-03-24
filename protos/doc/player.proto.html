@@ -273,13 +273,25 @@
                 </li>
               
                 <li>
-                  <a href="#login.WorldSvrInfo"><span class="badge">M</span>WorldSvrInfo</a>
+                  <a href="#login.WorldEndPointInfo"><span class="badge">M</span>WorldEndPointInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#login.WorldEndPointInfoRsp"><span class="badge">M</span>WorldEndPointInfoRsp</a>
+                </li>
+              
+                <li>
+                  <a href="#login.WorldInfo"><span class="badge">M</span>WorldInfo</a>
                 </li>
               
                 <li>
                   <a href="#login.ZoneInfo"><span class="badge">M</span>ZoneInfo</a>
                 </li>
               
+              
+                <li>
+                  <a href="#login.ErrCode"><span class="badge">E</span>ErrCode</a>
+                </li>
               
               
               
@@ -913,14 +925,14 @@
               
                 <tr>
                   <td>WorldList</td>
-                  <td><a href="#login.WorldSvrInfo">WorldSvrInfo</a></td>
+                  <td><a href="#login.WorldEndPointInfo">WorldEndPointInfo</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>RecommendWorld</td>
-                  <td><a href="#login.WorldSvrInfo">WorldSvrInfo</a></td>
+                  <td><a href="#login.WorldEndPointInfo">WorldEndPointInfo</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -938,9 +950,155 @@
 
         
       
-        <h3 id="login.WorldSvrInfo">WorldSvrInfo</h3>
+        <h3 id="login.WorldEndPointInfo">WorldEndPointInfo</h3>
         <p></p>
 
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ZoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>SId</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Addr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Players</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>PIdx</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Max</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Stat</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>0 - 未开服， 1：空闲，2：火热：3：爆满，4：维护中 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="login.WorldEndPointInfoRsp">WorldEndPointInfoRsp</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ErrCode</td>
+                  <td><a href="#login.ErrCode">ErrCode</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>info</td>
+                  <td><a href="#login.WorldEndPointInfo">WorldEndPointInfo</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="login.WorldInfo">WorldInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ErrCode</td>
+                  <td><a href="#login.ErrCode">ErrCode</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ZoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>EndPointsInfo</td>
+                  <td><a href="#login.WorldInfo">WorldInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>recently</td>
+                  <td><a href="#login.WorldInfo">WorldInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>recommend</td>
+                  <td><a href="#login.WorldInfo">WorldInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
         
 
         
@@ -949,10 +1107,98 @@
         <p></p>
 
         
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>Id</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Status</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
 
         
       
 
+      
+        <h3 id="login.ErrCode">ErrCode</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>none</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>Success</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>Unknown</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SessionKey</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ImageSize</td>
+                <td>4</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>FileType</td>
+                <td>5</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>OpenFile</td>
+                <td>6</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ReadFile</td>
+                <td>7</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>TimeOut</td>
+                <td>8</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
       
 
       

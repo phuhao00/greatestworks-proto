@@ -26,15 +26,49 @@ message LoginData{
  bool IsIpInWhiteList=19;
  string ShuShuGameID=20;
  int64 RegRegTimeStart=21;
- repeated WorldSvrInfo WorldList=22;
- repeated  WorldSvrInfo RecommendWorld=23;
+ repeated WorldEndPointInfo WorldList=22;
+ repeated  WorldEndPointInfo RecommendWorld=23;
  repeated  ZoneInfo ZoneList=24;
 }
 
-message WorldSvrInfo {
-
-}
-
 message ZoneInfo{
-
+ int32 Id =1;
+int32  Status=2;
 }
+
+message WorldEndPointInfo {
+ int32 ZoneId=1;
+ string SId=2;
+ string Addr=3;
+ string Name=4;
+ int32 Players=5;
+ uint32 PIdx=6;
+ uint32 Max=7;
+ int32 Stat=8;  //0 - 未开服， 1：空闲，2：火热：3：爆满，4：维护中
+}
+
+message WorldInfo {
+   ErrCode ErrCode=1;
+   int32 ZoneId=2;
+   repeated WorldInfo EndPointsInfo=3;
+   repeated WorldInfo recently=4;
+   repeated WorldInfo recommend=5;
+}
+
+message WorldEndPointInfoRsp{
+    ErrCode ErrCode=1;
+    WorldEndPointInfo info=2;
+}
+
+enum ErrCode{
+    none=0;
+    Success=1;
+    Unknown=2;
+    SessionKey=3;
+    ImageSize=4;
+    FileType=5;
+    OpenFile=6;
+    ReadFile=7;
+    TimeOut=8;
+}
+

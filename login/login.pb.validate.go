@@ -184,77 +184,16 @@ var _ interface {
 	ErrorName() string
 } = LoginDataValidationError{}
 
-// Validate checks the field values on WorldSvrInfo with the rules defined in
-// the proto definition for this message. If any rules are violated, an error
-// is returned.
-func (m *WorldSvrInfo) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	return nil
-}
-
-// WorldSvrInfoValidationError is the validation error returned by
-// WorldSvrInfo.Validate if the designated constraints aren't met.
-type WorldSvrInfoValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e WorldSvrInfoValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e WorldSvrInfoValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e WorldSvrInfoValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e WorldSvrInfoValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e WorldSvrInfoValidationError) ErrorName() string { return "WorldSvrInfoValidationError" }
-
-// Error satisfies the builtin error interface
-func (e WorldSvrInfoValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sWorldSvrInfo.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = WorldSvrInfoValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = WorldSvrInfoValidationError{}
-
 // Validate checks the field values on ZoneInfo with the rules defined in the
 // proto definition for this message. If any rules are violated, an error is returned.
 func (m *ZoneInfo) Validate() error {
 	if m == nil {
 		return nil
 	}
+
+	// no validation rules for Id
+
+	// no validation rules for Status
 
 	return nil
 }
@@ -312,3 +251,278 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = ZoneInfoValidationError{}
+
+// Validate checks the field values on WorldEndPointInfo with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *WorldEndPointInfo) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for ZoneId
+
+	// no validation rules for SId
+
+	// no validation rules for Addr
+
+	// no validation rules for Name
+
+	// no validation rules for Players
+
+	// no validation rules for PIdx
+
+	// no validation rules for Max
+
+	// no validation rules for Stat
+
+	return nil
+}
+
+// WorldEndPointInfoValidationError is the validation error returned by
+// WorldEndPointInfo.Validate if the designated constraints aren't met.
+type WorldEndPointInfoValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e WorldEndPointInfoValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e WorldEndPointInfoValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e WorldEndPointInfoValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e WorldEndPointInfoValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e WorldEndPointInfoValidationError) ErrorName() string {
+	return "WorldEndPointInfoValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e WorldEndPointInfoValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sWorldEndPointInfo.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = WorldEndPointInfoValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = WorldEndPointInfoValidationError{}
+
+// Validate checks the field values on WorldInfo with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *WorldInfo) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for ErrCode
+
+	// no validation rules for ZoneId
+
+	for idx, item := range m.GetEndPointsInfo() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return WorldInfoValidationError{
+					field:  fmt.Sprintf("EndPointsInfo[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetRecently() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return WorldInfoValidationError{
+					field:  fmt.Sprintf("Recently[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetRecommend() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return WorldInfoValidationError{
+					field:  fmt.Sprintf("Recommend[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// WorldInfoValidationError is the validation error returned by
+// WorldInfo.Validate if the designated constraints aren't met.
+type WorldInfoValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e WorldInfoValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e WorldInfoValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e WorldInfoValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e WorldInfoValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e WorldInfoValidationError) ErrorName() string { return "WorldInfoValidationError" }
+
+// Error satisfies the builtin error interface
+func (e WorldInfoValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sWorldInfo.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = WorldInfoValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = WorldInfoValidationError{}
+
+// Validate checks the field values on WorldEndPointInfoRsp with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *WorldEndPointInfoRsp) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for ErrCode
+
+	if v, ok := interface{}(m.GetInfo()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return WorldEndPointInfoRspValidationError{
+				field:  "Info",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// WorldEndPointInfoRspValidationError is the validation error returned by
+// WorldEndPointInfoRsp.Validate if the designated constraints aren't met.
+type WorldEndPointInfoRspValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e WorldEndPointInfoRspValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e WorldEndPointInfoRspValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e WorldEndPointInfoRspValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e WorldEndPointInfoRspValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e WorldEndPointInfoRspValidationError) ErrorName() string {
+	return "WorldEndPointInfoRspValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e WorldEndPointInfoRspValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sWorldEndPointInfoRsp.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = WorldEndPointInfoRspValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = WorldEndPointInfoRspValidationError{}
