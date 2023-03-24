@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package  attribute;
 
-option go_package="github.com/phuhao00/greatestworks-proto/gen/attribute;attribute";
+option go_package="github.com/phuhao00/greatestworks-proto/attribute;attribute";
 
 option csharp_namespace = "attributeG";
 

@@ -25,6 +25,7 @@ if test -z "$gengo"; then
   exit  1
 fi
 
+root_dir="./protos"
 
 function getdir(){
     for element in `ls $1`
@@ -46,11 +47,13 @@ function getdir(){
                           #3> 多加了x，是为了防止字符串为空时报错。
 
             if [ "${dir_or_file##*.}"x = "proto"x ]; then
-              protoc  --proto_path=$1 --validate_out="lang=go:$1" --go_out=$1  --doc_out=./doc --doc_opt=html,index.html $dir_or_file
+              protoc -I $root_dir  --proto_path=$1 --validate_out="lang=go:$1" --go_out=$root_dir  --doc_out=$root_dir/doc --doc_opt=html,$dir_or_file.html $dir_or_file  $root_dir/*.proto
             fi
         fi
     done
 }
-root_dir="./protos"
+
 getdir $root_dir
+
+exec cp -r protos/github.com/phuhao00/greatestworks-proto/*  ./
 

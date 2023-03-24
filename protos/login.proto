@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package login;
 
-option go_package="./;login";
+option go_package="github.com/phuhao00/greatestworks-proto/login;login";
 
 message LoginData{
  uint32 Result=1;

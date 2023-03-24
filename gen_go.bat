@@ -27,6 +27,6 @@ mkdir doc
 
 protoc  --proto_path=./proto --validate_out="lang=go:./" --go_out=./  --doc_out=./doc --doc_opt=html,index.html proto/*.proto
 
-move github.com/phuhao00/greatestworks-proto/gen  ./
+move github.com/phuhao00/greatestworks-proto/gen  ./protos/pb
 rd /s/q github.com
 pause

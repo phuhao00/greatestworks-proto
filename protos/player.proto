@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package player;
 import "attribute.proto";
-option go_package="github.com/phuhao00/greatestworks-proto/gen/player;player";
+option go_package="github.com/phuhao00/greatestworks-proto/player;player";
 
 option csharp_namespace = "playerG";
 

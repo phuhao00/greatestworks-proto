@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package  messageId;
 
-option go_package="github.com/phuhao00/greatestworks-proto/gen/messageId;messageId";
+option go_package="github.com/phuhao00/greatestworks-proto/messageId;messageId";
 
 option csharp_namespace = "messageIdG";
 
