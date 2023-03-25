@@ -13,7 +13,7 @@ enum NsqCommand{
 
 message ComplexMessage{
     NsqCommand cmd=1;
-    repeated bytes data=2;
+     bytes data=2;
     int64 time=3;
 }
 

@@ -43,6 +43,8 @@ func (m *ComplexMessage) Validate() error {
 
 	// no validation rules for Cmd
 
+	// no validation rules for Data
+
 	// no validation rules for Time
 
 	return nil
