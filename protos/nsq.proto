@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package  nsq;
+
+option go_package="github.com/phuhao00/greatestworks-proto/nsq;nsq";
+
+enum NsqCommand{
+    None=0;
+
+
+}
+
+
+message ComplexMessage{
+    NsqCommand cmd=1;
+    repeated bytes data=2;
+    int64 time=3;
+}
+
+message Mail {
+
+}
+
+message FriendMessage{
+  uint64 sender = 1;
+  uint64 receiver = 2;
+  NsqCommand cmd = 3;
+}

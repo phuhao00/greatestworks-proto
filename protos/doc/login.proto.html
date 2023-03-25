@@ -291,6 +291,33 @@
         
           
           <li>
+            <a href="#nsq.proto">nsq.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#nsq.ComplexMessage"><span class="badge">M</span>ComplexMessage</a>
+                </li>
+              
+                <li>
+                  <a href="#nsq.FriendMessage"><span class="badge">M</span>FriendMessage</a>
+                </li>
+              
+                <li>
+                  <a href="#nsq.Mail"><span class="badge">M</span>Mail</a>
+                </li>
+              
+              
+                <li>
+                  <a href="#nsq.NsqCommand"><span class="badge">E</span>NsqCommand</a>
+                </li>
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
             <a href="#player.proto">player.proto</a>
             <ul>
               
@@ -1456,6 +1483,118 @@
               <tr>
                 <td>SyncTransform</td>
                 <td>200030</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="nsq.proto">nsq.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="nsq.ComplexMessage">ComplexMessage</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>cmd</td>
+                  <td><a href="#nsq.NsqCommand">NsqCommand</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>time</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="nsq.FriendMessage">FriendMessage</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>sender</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>receiver</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>cmd</td>
+                  <td><a href="#nsq.NsqCommand">NsqCommand</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="nsq.Mail">Mail</h3>
+        <p></p>
+
+        
+
+        
+      
+
+      
+        <h3 id="nsq.NsqCommand">NsqCommand</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>None</td>
+                <td>0</td>
                 <td><p></p></td>
               </tr>
             
