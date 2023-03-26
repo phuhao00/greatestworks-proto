@@ -58,3 +58,11 @@ getdir $root_dir
  cp -r protos/github.com/phuhao00/greatestworks-proto/*  ./
 
  rm -rf protos/github.com
+
+ gitNeTag=$1
+
+ git tag $gitNeTag
+ echo "create new tag:"$gitNeTag
+ git push origin $gitNeTag
+
+

@@ -6,7 +6,7 @@ option go_package="github.com/phuhao00/greatestworks-proto/nsq;nsq";
 
 enum NsqCommand{
     None=0;
-
+    KickOutPlayer=1;
 
 }
 
