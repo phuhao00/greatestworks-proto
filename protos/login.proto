@@ -72,3 +72,15 @@ enum ErrCode{
     TimeOut=8;
 }
 
+
+enum KickOutReason{
+    NoReason =0;
+    RemoteLogin=1;
+}
+
+message KickOutPlayer{
+  uint64 UserID =1;
+  KickOutReason KickOutReason=2;
+  string Reason  =3;
+  string SvrId =4;
+}

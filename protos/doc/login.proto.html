@@ -179,6 +179,10 @@
             <ul>
               
                 <li>
+                  <a href="#login.KickOutPlayer"><span class="badge">M</span>KickOutPlayer</a>
+                </li>
+              
+                <li>
                   <a href="#login.LoginData"><span class="badge">M</span>LoginData</a>
                 </li>
               
@@ -201,6 +205,10 @@
               
                 <li>
                   <a href="#login.ErrCode"><span class="badge">E</span>ErrCode</a>
+                </li>
+              
+                <li>
+                  <a href="#login.KickOutReason"><span class="badge">E</span>KickOutReason</a>
                 </li>
               
               
@@ -245,6 +253,10 @@
             <ul>
               
                 <li>
+                  <a href="#login.KickOutPlayer"><span class="badge">M</span>KickOutPlayer</a>
+                </li>
+              
+                <li>
                   <a href="#login.LoginData"><span class="badge">M</span>LoginData</a>
                 </li>
               
@@ -267,6 +279,10 @@
               
                 <li>
                   <a href="#login.ErrCode"><span class="badge">E</span>ErrCode</a>
+                </li>
+              
+                <li>
+                  <a href="#login.KickOutReason"><span class="badge">E</span>KickOutReason</a>
                 </li>
               
               
@@ -387,6 +403,50 @@
       <p></p>
 
       
+        <h3 id="login.KickOutPlayer">KickOutPlayer</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>UserID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>KickOutReason</td>
+                  <td><a href="#login.KickOutReason">KickOutReason</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Reason</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>SvrId</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="login.LoginData">LoginData</h3>
         <p></p>
 
@@ -815,6 +875,29 @@
               <tr>
                 <td>TimeOut</td>
                 <td>8</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="login.KickOutReason">KickOutReason</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NoReason</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>RemoteLogin</td>
+                <td>1</td>
                 <td><p></p></td>
               </tr>
             
@@ -922,6 +1005,50 @@
       <p></p>
 
       
+        <h3 id="login.KickOutPlayer">KickOutPlayer</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>UserID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>KickOutReason</td>
+                  <td><a href="#login.KickOutReason">KickOutReason</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Reason</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>SvrId</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="login.LoginData">LoginData</h3>
         <p></p>
 
@@ -1350,6 +1477,29 @@
               <tr>
                 <td>TimeOut</td>
                 <td>8</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="login.KickOutReason">KickOutReason</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NoReason</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>RemoteLogin</td>
+                <td>1</td>
                 <td><p></p></td>
               </tr>
             
