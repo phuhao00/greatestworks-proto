@@ -65,4 +65,6 @@ getdir $root_dir
  echo "create new tag:"$gitNeTag
  git push origin $gitNeTag
 
+ exit
+
 

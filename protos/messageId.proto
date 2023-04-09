@@ -31,4 +31,13 @@ enum MessageId {
   DestroyNetworkObjects= 200022;
   SyncTransform= 200030;
 
+
+  //card
+  CSCardBuy=300100;
+  SCCardBuy=300101;
+  CSCardRenew=300102;
+  SCCardRenew=300103;
+  CSCardDailyReceive=300104;
+  SCCardDailyReceive=300105;
+
 }

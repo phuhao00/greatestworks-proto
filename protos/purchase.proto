@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package purchase;
+option go_package="github.com/phuhao00/greatestworks-proto/purchase;purchase";
+
+option csharp_namespace = "purchase";
+
+enum CardAction{
+  NOAction =0;
+  DailyReceived=1;
+  Buy=2;
+  Renew=3;
+}
+
