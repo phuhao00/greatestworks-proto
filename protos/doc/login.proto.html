@@ -249,6 +249,21 @@
         
           
           <li>
+            <a href="#errorcode.proto">errorcode.proto</a>
+            <ul>
+              
+              
+                <li>
+                  <a href="#ErrCode.ErrCode"><span class="badge">E</span>ErrCode</a>
+                </li>
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
             <a href="#login.proto">login.proto</a>
             <ul>
               
@@ -395,6 +410,22 @@
           <li>
             <a href="#purchase.proto">purchase.proto</a>
             <ul>
+              
+                <li>
+                  <a href="#purchase.CSCardAction"><span class="badge">M</span>CSCardAction</a>
+                </li>
+              
+                <li>
+                  <a href="#purchase.CardInfo"><span class="badge">M</span>CardInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#purchase.SCCardAction"><span class="badge">M</span>SCCardAction</a>
+                </li>
+              
+                <li>
+                  <a href="#purchase.SCCards"><span class="badge">M</span>SCCards</a>
+                </li>
               
               
                 <li>
@@ -1002,6 +1033,55 @@
               <tr>
                 <td>NoneWeekly</td>
                 <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="errorcode.proto">errorcode.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+
+      
+        <h3 id="ErrCode.ErrCode">ErrCode</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>Success</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>gameplay_max</td>
+                <td>100000</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>communicate_max</td>
+                <td>200000</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>purchase_max</td>
+                <td>300000</td>
                 <td><p></p></td>
               </tr>
             
@@ -1652,38 +1732,14 @@
               </tr>
             
               <tr>
-                <td>CSCardBuy</td>
+                <td>CSCardAction</td>
                 <td>300100</td>
                 <td><p>card</p></td>
               </tr>
             
               <tr>
-                <td>SCCardBuy</td>
+                <td>SCCardAction</td>
                 <td>300101</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardRenew</td>
-                <td>300102</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardRenew</td>
-                <td>300103</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardDailyReceive</td>
-                <td>300104</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardDailyReceive</td>
-                <td>300105</td>
                 <td><p></p></td>
               </tr>
             
@@ -2112,6 +2168,126 @@
       </div>
       <p></p>
 
+      
+        <h3 id="purchase.CSCardAction">CSCardAction</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>CardId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>action</td>
+                  <td><a href="#purchase.CardAction">CardAction</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="purchase.CardInfo">CardInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ExpireTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>CanReceivedTimes</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="purchase.SCCardAction">SCCardAction</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>CardId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Code</td>
+                  <td><a href="#ErrCode.ErrCode">ErrCode.ErrCode</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>action</td>
+                  <td><a href="#purchase.CardAction">CardAction</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="purchase.SCCards">SCCards</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>infos</td>
+                  <td><a href="#purchase.CardInfo">CardInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
       
 
       

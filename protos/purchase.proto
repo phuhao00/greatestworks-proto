@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package purchase;
+import "errorcode.proto";
 option go_package="github.com/phuhao00/greatestworks-proto/purchase;purchase";
 
 option csharp_namespace = "purchase";
@@ -12,3 +13,22 @@ enum CardAction{
   Renew=3;
 }
 
+message CSCardAction{
+  uint32 CardId=1;
+  CardAction action=2;
+}
+
+message SCCardAction{
+  uint32 CardId=1;
+  ErrCode.ErrCode Code=2;
+  CardAction action=3;
+}
+
+message SCCards{
+  repeated CardInfo infos=1;
+}
+
+message CardInfo{
+  int64 ExpireTime=1;
+  int32  CanReceivedTimes=2;
+}

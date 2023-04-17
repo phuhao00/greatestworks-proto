@@ -16,6 +16,8 @@ import (
 	"unicode/utf8"
 
 	"google.golang.org/protobuf/types/known/anypb"
+
+	ErrCode "github.com/phuhao00/greatestworks-proto/ErrCode"
 )
 
 // ensure the imports are used
@@ -31,4 +33,293 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+
+	_ = ErrCode.ErrCode(0)
 )
+
+// Validate checks the field values on CSCardAction with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *CSCardAction) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for CardId
+
+	// no validation rules for Action
+
+	return nil
+}
+
+// CSCardActionValidationError is the validation error returned by
+// CSCardAction.Validate if the designated constraints aren't met.
+type CSCardActionValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e CSCardActionValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e CSCardActionValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e CSCardActionValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e CSCardActionValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e CSCardActionValidationError) ErrorName() string { return "CSCardActionValidationError" }
+
+// Error satisfies the builtin error interface
+func (e CSCardActionValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sCSCardAction.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = CSCardActionValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = CSCardActionValidationError{}
+
+// Validate checks the field values on SCCardAction with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *SCCardAction) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for CardId
+
+	// no validation rules for Code
+
+	// no validation rules for Action
+
+	return nil
+}
+
+// SCCardActionValidationError is the validation error returned by
+// SCCardAction.Validate if the designated constraints aren't met.
+type SCCardActionValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e SCCardActionValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e SCCardActionValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e SCCardActionValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e SCCardActionValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e SCCardActionValidationError) ErrorName() string { return "SCCardActionValidationError" }
+
+// Error satisfies the builtin error interface
+func (e SCCardActionValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sSCCardAction.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = SCCardActionValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = SCCardActionValidationError{}
+
+// Validate checks the field values on SCCards with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *SCCards) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	for idx, item := range m.GetInfos() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return SCCardsValidationError{
+					field:  fmt.Sprintf("Infos[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// SCCardsValidationError is the validation error returned by SCCards.Validate
+// if the designated constraints aren't met.
+type SCCardsValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e SCCardsValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e SCCardsValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e SCCardsValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e SCCardsValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e SCCardsValidationError) ErrorName() string { return "SCCardsValidationError" }
+
+// Error satisfies the builtin error interface
+func (e SCCardsValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sSCCards.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = SCCardsValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = SCCardsValidationError{}
+
+// Validate checks the field values on CardInfo with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *CardInfo) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for ExpireTime
+
+	// no validation rules for CanReceivedTimes
+
+	return nil
+}
+
+// CardInfoValidationError is the validation error returned by
+// CardInfo.Validate if the designated constraints aren't met.
+type CardInfoValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e CardInfoValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e CardInfoValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e CardInfoValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e CardInfoValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e CardInfoValidationError) ErrorName() string { return "CardInfoValidationError" }
+
+// Error satisfies the builtin error interface
+func (e CardInfoValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sCardInfo.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = CardInfoValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = CardInfoValidationError{}

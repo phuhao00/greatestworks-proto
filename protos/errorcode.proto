@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package  ErrCode;
+
+option go_package="github.com/phuhao00/greatestworks-proto/ErrCode;ErrCode";
+
+option csharp_namespace = "ErrCode";
+
+enum ErrCode {
+   Success=0;
+
+   gameplay_max=100000;
+
+   communicate_max= 200000;
+
+   purchase_max=300000;
+
+}
