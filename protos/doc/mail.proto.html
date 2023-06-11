@@ -175,12 +175,28 @@
         
           
           <li>
-            <a href="#messageId.proto">messageId.proto</a>
+            <a href="#mail.proto">mail.proto</a>
             <ul>
+              
+                <li>
+                  <a href="#mail.GoodsInfo"><span class="badge">M</span>GoodsInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#mail.MailInfo"><span class="badge">M</span>MailInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#mail.letter"><span class="badge">M</span>letter</a>
+                </li>
               
               
                 <li>
-                  <a href="#messageId.MessageId"><span class="badge">E</span>MessageId</a>
+                  <a href="#mail.EmailStatus"><span class="badge">E</span>EmailStatus</a>
+                </li>
+              
+                <li>
+                  <a href="#mail.EmailType"><span class="badge">E</span>EmailType</a>
                 </li>
               
               
@@ -821,14 +837,279 @@
     
       
       <div class="file-heading">
-        <h2 id="messageId.proto">messageId.proto</h2><a href="#title">Top</a>
+        <h2 id="mail.proto">mail.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
+        <h3 id="mail.GoodsInfo">GoodsInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ItemId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Num</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Expire</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>过期时间 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="mail.MailInfo">MailInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>mUuid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>mailId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>对就mail表ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sender</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>mType</td>
+                  <td><a href="#mail.EmailType">EmailType</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#mail.EmailStatus">EmailStatus</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>senderNickName</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>content</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>goods</td>
+                  <td><a href="#mail.GoodsInfo">GoodsInfo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>decorator</td>
+                  <td><a href="#string">string</a></td>
+                  <td>repeated</td>
+                  <td><p>装饰 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>mtime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>color</td>
+                  <td><a href="#float">float</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>template</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>模板 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>paster</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p>贴纸 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>topic</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>senderHead</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>headline</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>标题 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>版本号 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>url</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="mail.letter">letter</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>uuid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>唯一ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>msg</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>发信息 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>nick</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>发送人昵称 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tm</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>发时间 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>response</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>回信息 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>responseTm</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>回时间 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>senderId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>发送人playerID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isRead</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否已读 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isAddFriend</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否加好友 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>dealFriendState</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>处理好友请求信息的状态  0:未处理  1:已同意  2:已拒绝 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
 
       
-        <h3 id="messageId.MessageId">MessageId</h3>
+        <h3 id="mail.EmailStatus">EmailStatus</h3>
         <p></p>
         <table class="enum-table">
           <thead>
@@ -837,159 +1118,80 @@
           <tbody>
             
               <tr>
-                <td>None</td>
+                <td>INIT</td>
+                <td>0</td>
+                <td><p>初始状态</p></td>
+              </tr>
+            
+              <tr>
+                <td>READ</td>
+                <td>1</td>
+                <td><p>已读</p></td>
+              </tr>
+            
+              <tr>
+                <td>ACCEPTED</td>
+                <td>2</td>
+                <td><p>已受理</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="mail.EmailType">EmailType</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>NORMAL</td>
                 <td>0</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogin</td>
-                <td>10001</td>
-                <td><p>gateway--------</p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayLogout</td>
-                <td>10002</td>
+                <td>COLLECT</td>
+                <td>1</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayOnlineList</td>
-                <td>10003</td>
+                <td>RECYCLE</td>
+                <td>2</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayJoinOnline</td>
-                <td>10004</td>
+                <td>SYSTEM</td>
+                <td>3</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSReconnection</td>
-                <td>10005</td>
-                <td><p></p></td>
+                <td>POSTCARD</td>
+                <td>4</td>
+                <td><p>明信片</p></td>
               </tr>
             
               <tr>
-                <td>SceneHeartbeat</td>
-                <td>10006</td>
-                <td><p></p></td>
+                <td>NOTEPAPER</td>
+                <td>5</td>
+                <td><p>信纸</p></td>
               </tr>
             
               <tr>
-                <td>CSCreatePlayer</td>
-                <td>50001</td>
-                <td><p></p></td>
+                <td>GMPersonal</td>
+                <td>9</td>
+                <td><p>gm 给个人发的邮件</p></td>
               </tr>
             
               <tr>
-                <td>SCCreatePlayer</td>
-                <td>50002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSLogin</td>
-                <td>50003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCLogin</td>
-                <td>50004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSAddFriend</td>
-                <td>100001</td>
-                <td><p>player</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCAddFriend</td>
-                <td>100002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSDelFriend</td>
-                <td>100003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCDelFriend</td>
-                <td>100004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSSendChatMsg</td>
-                <td>100005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCSendChatMsg</td>
-                <td>100006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ClientRequestObjectSync</td>
-                <td>200010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSync</td>
-                <td>200011</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSyncComplete</td>
-                <td>200012</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Instantiate</td>
-                <td>200020</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Destroy</td>
-                <td>200021</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DestroyNetworkObjects</td>
-                <td>200022</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SyncTransform</td>
-                <td>200030</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardAction</td>
-                <td>300100</td>
-                <td><p>card</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardAction</td>
-                <td>300101</td>
-                <td><p></p></td>
+                <td>GMSpecial</td>
+                <td>10</td>
+                <td><p>gm特殊邮件(双包并行邮件模板)</p></td>
               </tr>
             
           </tbody>

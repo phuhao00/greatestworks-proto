@@ -16,6 +16,8 @@ import (
 	"unicode/utf8"
 
 	"google.golang.org/protobuf/types/known/anypb"
+
+	server_common "github.com/phuhao00/greatestworks-proto/server_common"
 )
 
 // ensure the imports are used
@@ -31,7 +33,82 @@ var (
 	_ = (*url.URL)(nil)
 	_ = (*mail.Address)(nil)
 	_ = anypb.Any{}
+
+	_ = server_common.KickReason(0)
 )
+
+// Validate checks the field values on BanUserInfo with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *BanUserInfo) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for UserID
+
+	// no validation rules for KickReason
+
+	// no validation rules for Reason
+
+	// no validation rules for SerId
+
+	return nil
+}
+
+// BanUserInfoValidationError is the validation error returned by
+// BanUserInfo.Validate if the designated constraints aren't met.
+type BanUserInfoValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e BanUserInfoValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e BanUserInfoValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e BanUserInfoValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e BanUserInfoValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e BanUserInfoValidationError) ErrorName() string { return "BanUserInfoValidationError" }
+
+// Error satisfies the builtin error interface
+func (e BanUserInfoValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sBanUserInfo.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = BanUserInfoValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = BanUserInfoValidationError{}
 
 // Validate checks the field values on ComplexMessage with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
@@ -104,70 +181,6 @@ var _ interface {
 	ErrorName() string
 } = ComplexMessageValidationError{}
 
-// Validate checks the field values on Mail with the rules defined in the proto
-// definition for this message. If any rules are violated, an error is returned.
-func (m *Mail) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	return nil
-}
-
-// MailValidationError is the validation error returned by Mail.Validate if the
-// designated constraints aren't met.
-type MailValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e MailValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e MailValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e MailValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e MailValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e MailValidationError) ErrorName() string { return "MailValidationError" }
-
-// Error satisfies the builtin error interface
-func (e MailValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sMail.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = MailValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = MailValidationError{}
-
 // Validate checks the field values on FriendMessage with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
 // is returned.
@@ -238,3 +251,360 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = FriendMessageValidationError{}
+
+// Validate checks the field values on ReloadConfig with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *ReloadConfig) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Target
+
+	// no validation rules for ServerID
+
+	// no validation rules for FileName
+
+	// no validation rules for SendTime
+
+	return nil
+}
+
+// ReloadConfigValidationError is the validation error returned by
+// ReloadConfig.Validate if the designated constraints aren't met.
+type ReloadConfigValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ReloadConfigValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ReloadConfigValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ReloadConfigValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ReloadConfigValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ReloadConfigValidationError) ErrorName() string { return "ReloadConfigValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ReloadConfigValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sReloadConfig.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ReloadConfigValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ReloadConfigValidationError{}
+
+// Validate checks the field values on SetMaxPlayerNum with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *SetMaxPlayerNum) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for MaxPlayerNum
+
+	return nil
+}
+
+// SetMaxPlayerNumValidationError is the validation error returned by
+// SetMaxPlayerNum.Validate if the designated constraints aren't met.
+type SetMaxPlayerNumValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e SetMaxPlayerNumValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e SetMaxPlayerNumValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e SetMaxPlayerNumValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e SetMaxPlayerNumValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e SetMaxPlayerNumValidationError) ErrorName() string { return "SetMaxPlayerNumValidationError" }
+
+// Error satisfies the builtin error interface
+func (e SetMaxPlayerNumValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sSetMaxPlayerNum.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = SetMaxPlayerNumValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = SetMaxPlayerNumValidationError{}
+
+// Validate checks the field values on SetLogLevel with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *SetLogLevel) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Level
+
+	return nil
+}
+
+// SetLogLevelValidationError is the validation error returned by
+// SetLogLevel.Validate if the designated constraints aren't met.
+type SetLogLevelValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e SetLogLevelValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e SetLogLevelValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e SetLogLevelValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e SetLogLevelValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e SetLogLevelValidationError) ErrorName() string { return "SetLogLevelValidationError" }
+
+// Error satisfies the builtin error interface
+func (e SetLogLevelValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sSetLogLevel.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = SetLogLevelValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = SetLogLevelValidationError{}
+
+// Validate checks the field values on CloseGameSystem with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *CloseGameSystem) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for SysID
+
+	// no validation rules for Close
+
+	return nil
+}
+
+// CloseGameSystemValidationError is the validation error returned by
+// CloseGameSystem.Validate if the designated constraints aren't met.
+type CloseGameSystemValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e CloseGameSystemValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e CloseGameSystemValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e CloseGameSystemValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e CloseGameSystemValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e CloseGameSystemValidationError) ErrorName() string { return "CloseGameSystemValidationError" }
+
+// Error satisfies the builtin error interface
+func (e CloseGameSystemValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sCloseGameSystem.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = CloseGameSystemValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = CloseGameSystemValidationError{}
+
+// Validate checks the field values on LimitUser with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *LimitUser) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for UserID
+
+	for idx, item := range m.GetInfos() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return LimitUserValidationError{
+					field:  fmt.Sprintf("Infos[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// LimitUserValidationError is the validation error returned by
+// LimitUser.Validate if the designated constraints aren't met.
+type LimitUserValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e LimitUserValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e LimitUserValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e LimitUserValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e LimitUserValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e LimitUserValidationError) ErrorName() string { return "LimitUserValidationError" }
+
+// Error satisfies the builtin error interface
+func (e LimitUserValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sLimitUser.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = LimitUserValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = LimitUserValidationError{}

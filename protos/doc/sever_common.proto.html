@@ -175,12 +175,48 @@
         
           
           <li>
-            <a href="#messageId.proto">messageId.proto</a>
+            <a href="#sever_common.proto">sever_common.proto</a>
             <ul>
+              
+                <li>
+                  <a href="#ServerCommon.ActionData"><span class="badge">M</span>ActionData</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.InteractiveObj"><span class="badge">M</span>InteractiveObj</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.LimitInfo"><span class="badge">M</span>LimitInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.PlayerBaseInfo"><span class="badge">M</span>PlayerBaseInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.UnitActionData"><span class="badge">M</span>UnitActionData</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.UnitInfo"><span class="badge">M</span>UnitInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.Vec3"><span class="badge">M</span>Vec3</a>
+                </li>
               
               
                 <li>
-                  <a href="#messageId.MessageId"><span class="badge">E</span>MessageId</a>
+                  <a href="#ServerCommon.ActionParseType"><span class="badge">E</span>ActionParseType</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.InterObjStatus"><span class="badge">E</span>InterObjStatus</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.KickReason"><span class="badge">E</span>KickReason</a>
                 </li>
               
               
@@ -821,14 +857,728 @@
     
       
       <div class="file-heading">
-        <h2 id="messageId.proto">messageId.proto</h2><a href="#title">Top</a>
+        <h2 id="sever_common.proto">sever_common.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
+        <h3 id="ServerCommon.ActionData">ActionData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>actionState</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>动作枚举值 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>actionStartTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>动作开始时间 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>param</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>参数 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.InteractiveObj">InteractiveObj</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>唯一id </p></td>
+                </tr>
+              
+                <tr>
+                  <td>typeId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>配表id </p></td>
+                </tr>
+              
+                <tr>
+                  <td>posX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>x坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>posY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>y坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>posZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>z坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rotateX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>旋转x </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rotateY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>旋转y </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rotateZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>旋转z </p></td>
+                </tr>
+              
+                <tr>
+                  <td>jumpScene</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>跳转场景id(传送门数据) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>jumpBirth</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>跳转场景的出生点ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>players</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>repeated</td>
+                  <td><p>正在交互的玩家 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>localData</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>编辑器自定义数据 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isRes</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否是资源类型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>interType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>交互类型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>subPosX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>x坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>subPosY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>y坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>subPosZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>z坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>count</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>交互次数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>lastTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>上一次交互的时间戳 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#ServerCommon.InterObjStatus">InterObjStatus</a></td>
+                  <td></td>
+                  <td><p>状态 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>areaID</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>区域ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoomX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>缩放x </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoomY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>缩放y </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoomZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>缩放z </p></td>
+                </tr>
+              
+                <tr>
+                  <td>tagID</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>标记ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>index</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>序号 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>groupID</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>组号 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>params</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>自定义数据 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>owner</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>拥有者id </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.LimitInfo">LimitInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>Cond</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>原因 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>InReason</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>内部原因 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>OutReason</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>内部原因 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ExpTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>过期时间 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.PlayerBaseInfo">PlayerBaseInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>playerId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>charId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gold</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>positionX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>positionY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>positionZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>orientation</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>frame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>相框 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>head</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>头像 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>HeadUrl</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>自定义头像url </p></td>
+                </tr>
+              
+                <tr>
+                  <td>model</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>模型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>bubbleFrame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>气泡框 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>coin</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>vehicleID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>当前乘坐的载具ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>actData</td>
+                  <td><a href="#ServerCommon.ActionData">ActionData</a></td>
+                  <td></td>
+                  <td><p>动作 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>vipLevel</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>vip lv </p></td>
+                </tr>
+              
+                <tr>
+                  <td>exp</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>interactObjID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>交互物件ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>interactObjSeat</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>交互物件座位号 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>nameColor</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>昵称变颜色 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>baseLevel</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>人物等级 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>baseExp</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>人物经验 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.UnitActionData">UnitActionData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>actType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>0-清除当前状态 1-巡逻状态 2-一次性动作 3-持续性动作 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>actName</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>动作名称 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>actStartTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>动作开始时间 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ParseType</td>
+                  <td><a href="#ServerCommon.ActionParseType">ActionParseType</a></td>
+                  <td></td>
+                  <td><p>参数解析类型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>param</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>额外参数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>EmojiID</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>气泡框表情或者 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.UnitInfo">UnitInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>unitId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>唯一id </p></td>
+                </tr>
+              
+                <tr>
+                  <td>typeId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>UnitTable表id </p></td>
+                </tr>
+              
+                <tr>
+                  <td>posX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>x坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>posY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>y坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>posZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>z坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rotateX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>旋转x </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rotateY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>旋转y </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rotateZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>旋转z </p></td>
+                </tr>
+              
+                <tr>
+                  <td>canBeCarried</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否可以乘载 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>additionalList</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td>repeated</td>
+                  <td><p>附加列表 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>actData</td>
+                  <td><a href="#ServerCommon.UnitActionData">UnitActionData</a></td>
+                  <td></td>
+                  <td><p>动作数据 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>AttachID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>绑定的单位ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Attires</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p>装扮数据 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>attacheBuildingID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>正在交互的建筑，椅子 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>buildingSeat</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>交互建筑的位置 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>skinColor</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>皮肤颜色 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>名字 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isWork</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否在工作中 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.Vec3">Vec3</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>X</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Y</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Z</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
 
       
-        <h3 id="messageId.MessageId">MessageId</h3>
+        <h3 id="ServerCommon.ActionParseType">ActionParseType</h3>
         <p></p>
         <table class="enum-table">
           <thead>
@@ -837,159 +1587,97 @@
           <tbody>
             
               <tr>
-                <td>None</td>
+                <td>Nothing</td>
                 <td>0</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogin</td>
-                <td>10001</td>
-                <td><p>gateway--------</p></td>
+                <td>HoldDishes</td>
+                <td>1</td>
+                <td><p>举菜</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogout</td>
-                <td>10002</td>
-                <td><p></p></td>
+                <td>EatDishes</td>
+                <td>2</td>
+                <td><p>吃菜</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ServerCommon.InterObjStatus">InterObjStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>ObjectNormal</td>
+                <td>0</td>
+                <td><p>正常</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayOnlineList</td>
-                <td>10003</td>
-                <td><p></p></td>
+                <td>ObjectHarvest</td>
+                <td>1</td>
+                <td><p>成熟</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ServerCommon.KickReason">KickReason</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>UNKNOWN</td>
+                <td>0</td>
+                <td><p>未知原因</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayJoinOnline</td>
-                <td>10004</td>
-                <td><p></p></td>
+                <td>indulgeStop</td>
+                <td>1</td>
+                <td><p>防沉迷</p></td>
               </tr>
             
               <tr>
-                <td>CSReconnection</td>
-                <td>10005</td>
-                <td><p></p></td>
+                <td>RemoteLogin</td>
+                <td>2</td>
+                <td><p>异地登录</p></td>
               </tr>
             
               <tr>
-                <td>SceneHeartbeat</td>
-                <td>10006</td>
-                <td><p></p></td>
+                <td>ServerClose</td>
+                <td>3</td>
+                <td><p>服务器关闭</p></td>
               </tr>
             
               <tr>
-                <td>CSCreatePlayer</td>
-                <td>50001</td>
-                <td><p></p></td>
+                <td>GM</td>
+                <td>4</td>
+                <td><p>GM</p></td>
               </tr>
             
               <tr>
-                <td>SCCreatePlayer</td>
-                <td>50002</td>
-                <td><p></p></td>
+                <td>RefundPay</td>
+                <td>5</td>
+                <td><p>退款</p></td>
               </tr>
             
               <tr>
-                <td>CSLogin</td>
-                <td>50003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCLogin</td>
-                <td>50004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSAddFriend</td>
-                <td>100001</td>
-                <td><p>player</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCAddFriend</td>
-                <td>100002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSDelFriend</td>
-                <td>100003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCDelFriend</td>
-                <td>100004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSSendChatMsg</td>
-                <td>100005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCSendChatMsg</td>
-                <td>100006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ClientRequestObjectSync</td>
-                <td>200010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSync</td>
-                <td>200011</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSyncComplete</td>
-                <td>200012</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Instantiate</td>
-                <td>200020</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Destroy</td>
-                <td>200021</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DestroyNetworkObjects</td>
-                <td>200022</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SyncTransform</td>
-                <td>200030</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardAction</td>
-                <td>300100</td>
-                <td><p>card</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardAction</td>
-                <td>300101</td>
-                <td><p></p></td>
+                <td>NoResponse</td>
+                <td>6</td>
+                <td><p>未响应</p></td>
               </tr>
             
           </tbody>

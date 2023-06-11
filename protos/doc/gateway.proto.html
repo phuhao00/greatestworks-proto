@@ -175,12 +175,68 @@
         
           
           <li>
-            <a href="#messageId.proto">messageId.proto</a>
+            <a href="#gateway.proto">gateway.proto</a>
             <ul>
+              
+                <li>
+                  <a href="#gateway.CSGatewayJoinOnline"><span class="badge">M</span>CSGatewayJoinOnline</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.CSGatewayLogin"><span class="badge">M</span>CSGatewayLogin</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.CSGatewayLogout"><span class="badge">M</span>CSGatewayLogout</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.CSGatewayOnlineList"><span class="badge">M</span>CSGatewayOnlineList</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.CSReconnection"><span class="badge">M</span>CSReconnection</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.OnlineList"><span class="badge">M</span>OnlineList</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCGatewayJoinOnline"><span class="badge">M</span>SCGatewayJoinOnline</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCGatewayLogin"><span class="badge">M</span>SCGatewayLogin</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCGatewayLogout"><span class="badge">M</span>SCGatewayLogout</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCGatewayOnlineList"><span class="badge">M</span>SCGatewayOnlineList</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCReconnection"><span class="badge">M</span>SCReconnection</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCRewardBoxNotify"><span class="badge">M</span>SCRewardBoxNotify</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.SCRewardBoxNotify.RewardListEntry"><span class="badge">M</span>SCRewardBoxNotify.RewardListEntry</a>
+                </li>
               
               
                 <li>
-                  <a href="#messageId.MessageId"><span class="badge">E</span>MessageId</a>
+                  <a href="#gateway.GatewayErr"><span class="badge">E</span>GatewayErr</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.JoinErrorCode"><span class="badge">E</span>JoinErrorCode</a>
                 </li>
               
               
@@ -821,14 +877,584 @@
     
       
       <div class="file-heading">
-        <h2 id="messageId.proto">messageId.proto</h2><a href="#title">Top</a>
+        <h2 id="gateway.proto">gateway.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
+        <h3 id="gateway.CSGatewayJoinOnline">CSGatewayJoinOnline</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>sid</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>quick</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.CSGatewayLogin">CSGatewayLogin</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>platName</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.CSGatewayLogout">CSGatewayLogout</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>platName</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.CSGatewayOnlineList">CSGatewayOnlineList</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.CSReconnection">CSReconnection</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>platName</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.OnlineList">OnlineList</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>sid</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>addr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>players</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>proId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>max</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>最大人数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.SCGatewayJoinOnline">SCGatewayJoinOnline</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>account</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>nick</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gold</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sceneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isNew</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>frame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>相框 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>head</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>头像 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>model</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>模型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>level</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>exp</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>regTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>todayFirstLogin</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>今日首次登陆 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>当前所在的服务器ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>errCode</td>
+                  <td><a href="#gateway.JoinErrorCode">JoinErrorCode</a></td>
+                  <td></td>
+                  <td><p>进入服务器错误码 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.SCGatewayLogin">SCGatewayLogin</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>errCode</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>1，成功，2，登录验证失败, 3, 重复验证, 4，系统关门维护中; </p></td>
+                </tr>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sceneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.SCGatewayLogout">SCGatewayLogout</h3>
+        <p></p>
+
+        
+
+        
+      
+        <h3 id="gateway.SCGatewayOnlineList">SCGatewayOnlineList</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>list</td>
+                  <td><a href="#gateway.OnlineList">OnlineList</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.SCReconnection">SCReconnection</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ret</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>0-失败(失败返回正常登录流程) 1-成功 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.SCRewardBoxNotify">SCRewardBoxNotify</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rewardType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>弹框类型 0:弹窗 1:飘字 2:动画 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rewardList</td>
+                  <td><a href="#gateway.SCRewardBoxNotify.RewardListEntry">SCRewardBoxNotify.RewardListEntry</a></td>
+                  <td>repeated</td>
+                  <td><p>任务奖励 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>source</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>来源 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.SCRewardBoxNotify.RewardListEntry">SCRewardBoxNotify.RewardListEntry</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>key</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
 
       
-        <h3 id="messageId.MessageId">MessageId</h3>
+        <h3 id="gateway.GatewayErr">GatewayErr</h3>
         <p></p>
         <table class="enum-table">
           <thead>
@@ -837,159 +1463,98 @@
           <tbody>
             
               <tr>
-                <td>None</td>
+                <td>Unknown</td>
                 <td>0</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogin</td>
-                <td>10001</td>
-                <td><p>gateway--------</p></td>
+                <td>Success</td>
+                <td>1</td>
+                <td><p>成功</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogout</td>
-                <td>10002</td>
-                <td><p></p></td>
+                <td>Verify</td>
+                <td>2</td>
+                <td><p>登录验证失败</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayOnlineList</td>
-                <td>10003</td>
-                <td><p></p></td>
+                <td>RepeatedVerify</td>
+                <td>3</td>
+                <td><p>重复验证</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayJoinOnline</td>
-                <td>10004</td>
-                <td><p></p></td>
+                <td>Closed</td>
+                <td>4</td>
+                <td><p>系统关门维护中</p></td>
               </tr>
             
               <tr>
-                <td>CSReconnection</td>
-                <td>10005</td>
-                <td><p></p></td>
+                <td>LoseCurCon</td>
+                <td>5</td>
+                <td><p>当前连接不在了</p></td>
               </tr>
             
               <tr>
-                <td>SceneHeartbeat</td>
-                <td>10006</td>
-                <td><p></p></td>
+                <td>DisCurConn</td>
+                <td>6</td>
+                <td><p>当前连接没有断开</p></td>
               </tr>
             
               <tr>
-                <td>CSCreatePlayer</td>
-                <td>50001</td>
-                <td><p></p></td>
+                <td>BeingReConn</td>
+                <td>7</td>
+                <td><p>正在重连</p></td>
               </tr>
             
               <tr>
-                <td>SCCreatePlayer</td>
-                <td>50002</td>
-                <td><p></p></td>
+                <td>ZoneIdError</td>
+                <td>8</td>
+                <td><p>区错误</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="gateway.JoinErrorCode">JoinErrorCode</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>JoinWorldSuccess</td>
+                <td>0</td>
+                <td><p>成功</p></td>
               </tr>
             
               <tr>
-                <td>CSLogin</td>
-                <td>50003</td>
-                <td><p></p></td>
+                <td>JoinWorldNotOpen</td>
+                <td>1</td>
+                <td><p>服务器未开放</p></td>
               </tr>
             
               <tr>
-                <td>SCLogin</td>
-                <td>50004</td>
-                <td><p></p></td>
+                <td>JoinWorldIng</td>
+                <td>2</td>
+                <td><p>正在登陆中</p></td>
               </tr>
             
               <tr>
-                <td>CSAddFriend</td>
-                <td>100001</td>
-                <td><p>player</p></td>
+                <td>JoinWorldIsFull</td>
+                <td>3</td>
+                <td><p>服务器人数已满</p></td>
               </tr>
             
               <tr>
-                <td>SCAddFriend</td>
-                <td>100002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSDelFriend</td>
-                <td>100003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCDelFriend</td>
-                <td>100004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSSendChatMsg</td>
-                <td>100005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCSendChatMsg</td>
-                <td>100006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ClientRequestObjectSync</td>
-                <td>200010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSync</td>
-                <td>200011</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSyncComplete</td>
-                <td>200012</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Instantiate</td>
-                <td>200020</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Destroy</td>
-                <td>200021</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DestroyNetworkObjects</td>
-                <td>200022</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SyncTransform</td>
-                <td>200030</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardAction</td>
-                <td>300100</td>
-                <td><p>card</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardAction</td>
-                <td>300101</td>
-                <td><p></p></td>
+                <td>JoinZoneIdError</td>
+                <td>4</td>
+                <td><p>区错误</p></td>
               </tr>
             
           </tbody>

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package  shop;
+
+option go_package="github.com/phuhao00/greatestworks-proto/shop;shop";
+
+
+enum ShopType {
+  Min           = 0;
+  NpcShop       = 1;
+  DressShop     = 2;
+  HouseShop     = 3;
+  HomeShop      = 4;
+  AnimalShop    = 5;
+  PublicMall    = 6;
+  Activity      = 7;
+  PackageShop   = 8;  // 礼包
+  FurnitureShop = 9;  // 家具
+  Max           = 100;
+}
+
+message NpcShopData {
+  uint32 npcType          = 1; // npc类型
+  uint64 npcID            = 2; // npc唯一ID
+  ShopType shopType       = 3; // 商店类型
+  uint32 positionID       = 4; // 位置ID
+  repeated uint32 shopID  = 5; // 商品ID 复数
+  int64 appearTM          = 6; // 出现日期(当天的起始时间)
+}

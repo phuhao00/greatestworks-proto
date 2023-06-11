@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package  mail;
+
+option go_package="github.com/phuhao00/greatestworks-proto/mail;mail";
+
+enum EmailType {
+  NORMAL    = 0;
+  COLLECT   = 1;
+  RECYCLE   = 2;
+  SYSTEM    = 3;
+  POSTCARD  = 4;  // 明信片
+  NOTEPAPER = 5;  // 信纸
+  GMPersonal = 9; // gm 给个人发的邮件
+  GMSpecial = 10; // gm特殊邮件(双包并行邮件模板)
+}
+
+enum EmailStatus {
+  INIT     = 0; // 初始状态
+  READ     = 1; // 已读
+  ACCEPTED = 2; // 已受理
+}
+
+message MailInfo {
+  uint64 mUuid              = 1;
+  uint32 mailId             = 2; // 对就mail表ID
+  uint64 sender             = 3;
+  EmailType mType           = 4;
+  EmailStatus status        = 5;
+  string senderNickName     = 6;
+  string content            = 7;
+  repeated GoodsInfo goods  = 8;
+  repeated string decorator = 9; // 装饰
+  int64    mtime            = 10;
+  repeated float    color   = 11;
+  uint32 template           = 12; // 模板
+  repeated uint32 paster    = 13; // 贴纸
+  string   topic            = 14;
+  uint32   senderHead       = 15;
+  string   headline         = 16; // 标题
+  string   version          = 17; // 版本号
+  string   url              = 18;
+}
+
+message GoodsInfo {
+  uint32 ItemId = 1;
+  int32  Num    = 2;
+  int64  Expire = 3; // 过期时间
+}
+
+
+message letter
+{
+  uint64 uuid             = 1; // 唯一ID
+  string msg              = 2; // 发信息
+  string nick             = 3; // 发送人昵称
+  int64  tm               = 4; // 发时间
+  string response         = 5; // 回信息
+  int64  responseTm       = 6; // 回时间
+  uint64  senderId        = 7; // 发送人playerID
+  bool isRead             = 8; // 是否已读
+  bool isAddFriend        = 9; // 是否加好友
+  uint32 dealFriendState  = 10; //处理好友请求信息的状态  0:未处理  1:已同意  2:已拒绝
+}
+
+

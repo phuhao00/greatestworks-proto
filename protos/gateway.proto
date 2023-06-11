@@ -1,0 +1,125 @@
+syntax = "proto3";
+
+package  gateway;
+
+option go_package="github.com/phuhao00/greatestworks-proto/gateway;gateway";
+
+
+message CSGatewayLogin
+{
+  uint64 userid	  = 1;
+  string token	  = 2;
+  string platName = 3;
+  int32  zoneId   = 4; //分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通
+}
+
+enum GatewayErr
+{
+  Unknown        = 0;
+  Success        = 1; // 成功
+  Verify         = 2; // 登录验证失败
+  RepeatedVerify = 3; // 重复验证
+  Closed         = 4; // 系统关门维护中
+  LoseCurCon     = 5; // 当前连接不在了
+  DisCurConn     = 6; // 当前连接没有断开
+  BeingReConn    = 7; // 正在重连
+  ZoneIdError    = 8; // 区错误
+}
+
+message SCGatewayLogin
+{
+  uint32 errCode	= 1; // 1，成功，2，登录验证失败, 3, 重复验证, 4，系统关门维护中;
+  uint64 userid	  = 2;
+  string name		  = 3;
+  int32 sceneId	  = 4;
+  int32  zoneId   = 5; //分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通
+}
+
+message CSGatewayLogout
+{
+  uint64 userId	  = 1;
+  string token	  = 2;
+  string platName = 3;
+}
+
+message SCGatewayLogout
+{
+}
+
+message CSGatewayOnlineList
+{
+  int32  zoneId  = 1; //分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通
+}
+
+message OnlineList
+{
+  string sid     = 1;
+  string addr    = 2;
+  string name    = 3;
+  int32  players = 4;
+  uint32 proId   = 5;
+  int32  max     = 6; // 最大人数
+  int32  zoneId  = 7; //分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通
+}
+
+message SCGatewayOnlineList
+{
+  repeated OnlineList list = 1;
+}
+
+message CSGatewayJoinOnline
+{
+  string sid     = 1;
+  bool   quick   = 2;
+  int32  zoneId  = 3; //分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通
+  string version = 4;
+}
+
+enum JoinErrorCode {
+  JoinWorldSuccess	= 0; //成功
+  JoinWorldNotOpen 	= 1; //服务器未开放
+  JoinWorldIng		  = 2; //正在登陆中
+  JoinWorldIsFull	  = 3; //服务器人数已满
+  JoinZoneIdError	  = 4; //区错误
+}
+
+message SCGatewayJoinOnline
+{
+  uint64 userid			    = 1;
+  string account		    = 2;
+  string nick				    = 4;
+  uint32 gold				    = 5;
+  int32 sceneId			    = 6;
+  bool  isNew     		  = 7;
+  uint32 frame    		  = 8;  // 相框
+  uint32 head     		  = 9;  // 头像
+  uint32 model    		  = 10; // 模型
+  uint32 sex      		  = 11;
+  int32  level       		= 12;
+  int32  exp         		= 13;
+  int64 regTime      		= 14;
+  int64 serverTime   		= 15;
+  bool todayFirstLogin 	= 16; // 今日首次登陆
+  uint32  procIndex     = 17; // 当前所在的服务器ID
+  JoinErrorCode errCode = 18; // 进入服务器错误码
+}
+
+
+message SCRewardBoxNotify {
+  uint32 rewardType             = 1; // 弹框类型 0:弹窗 1:飘字 2:动画
+  map<uint32,int32>  rewardList = 2; // 任务奖励
+  int32 source                  = 3; // 来源
+}
+
+message CSReconnection {
+  uint64 userid	  = 1;
+  string token	  = 2;
+  string platName = 3;
+  int32  zoneId   = 4; //分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通
+  string version  = 5;
+}
+
+message SCReconnection {
+  uint32 ret = 1;  // 0-失败(失败返回正常登录流程) 1-成功
+}
+

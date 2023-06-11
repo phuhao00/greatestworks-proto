@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package  grid;
+
+option go_package="github.com/phuhao00/greatestworks-proto/grid;grid";
+
+
+// 三维向量(float)
+message PVector3
+{
+  float x	= 1;
+  float y = 2;
+  float z = 3;
+}
+
+// 二维向量(int)
+message PVector2Int
+{
+  int32 x	= 1;
+  int32 y = 2;
+}
+
+// 矩形(int)
+message PRectInt
+{
+  PVector2Int position 	= 1; // 起点坐标
+  PVector2Int size		  = 2; // 大小
+}
+
+// 地面格子
+message PGridFloorRect
+{
+  bool 		isShow		= 1; // 是否显示
+  string 		name		= 2; // 名字
+  int32		index		  = 3; // 编号
+  int32		type		  = 4; // 类型
+  int32		dir 		  = 5; // 方向
+  int32		unlockLv	= 6; // 解锁等级
+  PRectInt 	rect		= 7; // 矩形
+}
+

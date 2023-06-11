@@ -175,13 +175,25 @@
         
           
           <li>
-            <a href="#messageId.proto">messageId.proto</a>
+            <a href="#grid.proto">grid.proto</a>
             <ul>
               
+                <li>
+                  <a href="#grid.PGridFloorRect"><span class="badge">M</span>PGridFloorRect</a>
+                </li>
               
                 <li>
-                  <a href="#messageId.MessageId"><span class="badge">E</span>MessageId</a>
+                  <a href="#grid.PRectInt"><span class="badge">M</span>PRectInt</a>
                 </li>
+              
+                <li>
+                  <a href="#grid.PVector2Int"><span class="badge">M</span>PVector2Int</a>
+                </li>
+              
+                <li>
+                  <a href="#grid.PVector3"><span class="badge">M</span>PVector3</a>
+                </li>
+              
               
               
               
@@ -821,179 +833,174 @@
     
       
       <div class="file-heading">
-        <h2 id="messageId.proto">messageId.proto</h2><a href="#title">Top</a>
+        <h2 id="grid.proto">grid.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
+        <h3 id="grid.PGridFloorRect">PGridFloorRect</h3>
+        <p>地面格子</p>
 
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>isShow</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否显示 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>名字 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>index</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>编号 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>type</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>类型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>dir</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>方向 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>unlockLv</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>解锁等级 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rect</td>
+                  <td><a href="#grid.PRectInt">PRectInt</a></td>
+                  <td></td>
+                  <td><p>矩形 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
       
-        <h3 id="messageId.MessageId">MessageId</h3>
-        <p></p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>None</td>
-                <td>0</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayLogin</td>
-                <td>10001</td>
-                <td><p>gateway--------</p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayLogout</td>
-                <td>10002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayOnlineList</td>
-                <td>10003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayJoinOnline</td>
-                <td>10004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSReconnection</td>
-                <td>10005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SceneHeartbeat</td>
-                <td>10006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCreatePlayer</td>
-                <td>50001</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCreatePlayer</td>
-                <td>50002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSLogin</td>
-                <td>50003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCLogin</td>
-                <td>50004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSAddFriend</td>
-                <td>100001</td>
-                <td><p>player</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCAddFriend</td>
-                <td>100002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSDelFriend</td>
-                <td>100003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCDelFriend</td>
-                <td>100004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSSendChatMsg</td>
-                <td>100005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCSendChatMsg</td>
-                <td>100006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ClientRequestObjectSync</td>
-                <td>200010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSync</td>
-                <td>200011</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSyncComplete</td>
-                <td>200012</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Instantiate</td>
-                <td>200020</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Destroy</td>
-                <td>200021</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DestroyNetworkObjects</td>
-                <td>200022</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SyncTransform</td>
-                <td>200030</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardAction</td>
-                <td>300100</td>
-                <td><p>card</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardAction</td>
-                <td>300101</td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
+        <h3 id="grid.PRectInt">PRectInt</h3>
+        <p>矩形(int)</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>position</td>
+                  <td><a href="#grid.PVector2Int">PVector2Int</a></td>
+                  <td></td>
+                  <td><p>起点坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>size</td>
+                  <td><a href="#grid.PVector2Int">PVector2Int</a></td>
+                  <td></td>
+                  <td><p>大小 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="grid.PVector2Int">PVector2Int</h3>
+        <p>二维向量(int)</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="grid.PVector3">PVector3</h3>
+        <p>三维向量(float)</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>x</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>y</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>z</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+
       
 
       

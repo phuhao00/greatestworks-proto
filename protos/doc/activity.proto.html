@@ -175,12 +175,20 @@
         
           
           <li>
-            <a href="#messageId.proto">messageId.proto</a>
+            <a href="#activity.proto">activity.proto</a>
             <ul>
+              
+                <li>
+                  <a href="#activity.ActivityItemInfo"><span class="badge">M</span>ActivityItemInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#activity.GoodsInfo"><span class="badge">M</span>GoodsInfo</a>
+                </li>
               
               
                 <li>
-                  <a href="#messageId.MessageId"><span class="badge">E</span>MessageId</a>
+                  <a href="#activity.ActivityType"><span class="badge">E</span>ActivityType</a>
                 </li>
               
               
@@ -821,15 +829,82 @@
     
       
       <div class="file-heading">
-        <h2 id="messageId.proto">messageId.proto</h2><a href="#title">Top</a>
+        <h2 id="activity.proto">activity.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
+        <h3 id="activity.ActivityItemInfo">ActivityItemInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>actId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>活动id </p></td>
+                </tr>
+              
+                <tr>
+                  <td>info</td>
+                  <td><a href="#activity.GoodsInfo">GoodsInfo</a></td>
+                  <td>repeated</td>
+                  <td><p>物品信息 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="activity.GoodsInfo">GoodsInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ItemId</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Num</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Expire</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>过期时间 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
 
       
-        <h3 id="messageId.MessageId">MessageId</h3>
-        <p></p>
+        <h3 id="activity.ActivityType">ActivityType</h3>
+        <p>活动类型</p>
         <table class="enum-table">
           <thead>
             <tr><td>Name</td><td>Number</td><td>Description</td></tr>
@@ -837,159 +912,39 @@
           <tbody>
             
               <tr>
-                <td>None</td>
+                <td>otherNone</td>
                 <td>0</td>
-                <td><p></p></td>
+                <td><p>不是活动</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogin</td>
-                <td>10001</td>
-                <td><p>gateway--------</p></td>
+                <td>newCitizen</td>
+                <td>1</td>
+                <td><p>新公民报到</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayLogout</td>
-                <td>10002</td>
-                <td><p></p></td>
+                <td>firstRecharge</td>
+                <td>2</td>
+                <td><p>萌新首冲礼</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayOnlineList</td>
-                <td>10003</td>
-                <td><p></p></td>
+                <td>fourteenSign</td>
+                <td>3</td>
+                <td><p>14日签到</p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayJoinOnline</td>
-                <td>10004</td>
-                <td><p></p></td>
+                <td>celebrityRollDraw</td>
+                <td>4</td>
+                <td><p>庆典大转盘</p></td>
               </tr>
             
               <tr>
-                <td>CSReconnection</td>
-                <td>10005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SceneHeartbeat</td>
-                <td>10006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCreatePlayer</td>
-                <td>50001</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCreatePlayer</td>
-                <td>50002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSLogin</td>
-                <td>50003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCLogin</td>
-                <td>50004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSAddFriend</td>
-                <td>100001</td>
-                <td><p>player</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCAddFriend</td>
-                <td>100002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSDelFriend</td>
-                <td>100003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCDelFriend</td>
-                <td>100004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSSendChatMsg</td>
-                <td>100005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCSendChatMsg</td>
-                <td>100006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ClientRequestObjectSync</td>
-                <td>200010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSync</td>
-                <td>200011</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSyncComplete</td>
-                <td>200012</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Instantiate</td>
-                <td>200020</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Destroy</td>
-                <td>200021</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DestroyNetworkObjects</td>
-                <td>200022</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SyncTransform</td>
-                <td>200030</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardAction</td>
-                <td>300100</td>
-                <td><p>card</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardAction</td>
-                <td>300101</td>
-                <td><p></p></td>
+                <td>dragonBoatFestival</td>
+                <td>5</td>
+                <td><p>端午节活动</p></td>
               </tr>
             
           </tbody>

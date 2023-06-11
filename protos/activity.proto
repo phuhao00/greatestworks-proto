@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package  activity;
+
+option go_package="github.com/phuhao00/greatestworks-proto/activity;activity";
+
+
+message ActivityItemInfo
+{
+  uint32 actId             = 1; // 活动id
+  repeated GoodsInfo info  = 2; // 物品信息
+}
+
+message GoodsInfo {
+  uint32 ItemId = 1;
+  int32  Num    = 2;
+  int64  Expire = 3; // 过期时间
+}
+
+
+// 活动类型
+enum ActivityType{
+  otherNone = 0;                      // 不是活动
+  newCitizen  =1;                     // 新公民报到
+  firstRecharge = 2;                  // 萌新首冲礼
+  fourteenSign = 3;                   // 14日签到
+  celebrityRollDraw = 4;              // 庆典大转盘
+  dragonBoatFestival = 5;             // 端午节活动
+}

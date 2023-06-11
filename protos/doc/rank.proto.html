@@ -175,13 +175,17 @@
         
           
           <li>
-            <a href="#messageId.proto">messageId.proto</a>
+            <a href="#rank.proto">rank.proto</a>
             <ul>
               
+                <li>
+                  <a href="#rank.RankData"><span class="badge">M</span>RankData</a>
+                </li>
               
                 <li>
-                  <a href="#messageId.MessageId"><span class="badge">E</span>MessageId</a>
+                  <a href="#rank.RankMember"><span class="badge">M</span>RankMember</a>
                 </li>
+              
               
               
               
@@ -821,179 +825,100 @@
     
       
       <div class="file-heading">
-        <h2 id="messageId.proto">messageId.proto</h2><a href="#title">Top</a>
+        <h2 id="rank.proto">rank.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-
-      
-        <h3 id="messageId.MessageId">MessageId</h3>
+        <h3 id="rank.RankData">RankData</h3>
         <p></p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>None</td>
-                <td>0</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayLogin</td>
-                <td>10001</td>
-                <td><p>gateway--------</p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayLogout</td>
-                <td>10002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayOnlineList</td>
-                <td>10003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSGatewayJoinOnline</td>
-                <td>10004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSReconnection</td>
-                <td>10005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SceneHeartbeat</td>
-                <td>10006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCreatePlayer</td>
-                <td>50001</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCreatePlayer</td>
-                <td>50002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSLogin</td>
-                <td>50003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCLogin</td>
-                <td>50004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSAddFriend</td>
-                <td>100001</td>
-                <td><p>player</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCAddFriend</td>
-                <td>100002</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSDelFriend</td>
-                <td>100003</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCDelFriend</td>
-                <td>100004</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSSendChatMsg</td>
-                <td>100005</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SCSendChatMsg</td>
-                <td>100006</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ClientRequestObjectSync</td>
-                <td>200010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSync</td>
-                <td>200011</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ServerRequestObjectSyncComplete</td>
-                <td>200012</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Instantiate</td>
-                <td>200020</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Destroy</td>
-                <td>200021</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DestroyNetworkObjects</td>
-                <td>200022</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SyncTransform</td>
-                <td>200030</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>CSCardAction</td>
-                <td>300100</td>
-                <td><p>card</p></td>
-              </tr>
-            
-              <tr>
-                <td>SCCardAction</td>
-                <td>300101</td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>rankID</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>排行榜ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>members</td>
+                  <td><a href="#rank.RankMember">RankMember</a></td>
+                  <td>repeated</td>
+                  <td><p>排行榜数据 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="rank.RankMember">RankMember</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>index</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>排名 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>playerId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p>玩家ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>score</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>分数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>昵称 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>head</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>头像 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>headFrame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>头像框 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+
       
 
       

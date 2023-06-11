@@ -8,7 +8,14 @@ option csharp_namespace = "messageIdG";
 
 enum MessageId {
   None =0;
-
+  //gateway--------
+  CSGatewayLogin       =10001;
+  CSGatewayLogout      =10002;
+  CSGatewayOnlineList  =10003;
+  CSGatewayJoinOnline  =10004;
+  CSReconnection       =10005;
+  SceneHeartbeat       =10006;
+  //
   CSCreatePlayer=50001;
   SCCreatePlayer=50002;
   CSLogin=50003;
@@ -22,7 +29,7 @@ enum MessageId {
   CSSendChatMsg=100005;
   SCSendChatMsg=100006;
 
-
+   //
   ClientRequestObjectSync= 200010;
   ServerRequestObjectSync= 200011;
   ServerRequestObjectSyncComplete= 200012;

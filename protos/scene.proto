@@ -1,0 +1,106 @@
+syntax = "proto3";
+
+package  scene;
+import "sever_common.proto";
+
+option go_package="github.com/phuhao00/greatestworks-proto/scene;scene";
+
+message SceneHeartbeat
+{
+  int64 time = 1;
+}
+
+message CSCanJoinScene
+{
+  int32 sceneId			= 1;
+  uint64 playerId 	= 2;
+}
+
+message SCCanJoinScene
+{
+  bool isOk		    = 1; //
+  int32 sceneId	  = 2; // 跳转的场景ID
+  uint64 playerId	= 3; //
+}
+
+message CSJoinScene
+{
+  int32 sceneid			= 1; // 跳转的场景ID
+  uint32 birthid			= 2; // 传送点ID
+  uint64 playerid 		= 3; // 如果playerid != 0 表示进入玩家家园场景
+  string passwd   		= 4; //
+  repeated uint32 gift 	= 5; // 伴手礼
+  bool   isview   		= 6; // 是否观众
+  uint32 jumpType 		= 7; // 切场景原因类型(0:传送阵 1:任务切场景 2:区块出生点)
+  uint32 param			= 8; // jumpType=1 param=task step id
+  string portal			= 9; // 传送门数据
+}
+
+message SCJoinScene
+{
+  int32 sceneId					= 1; // 跳转的场景ID
+  ServerCommon.PlayerBaseInfo playerInfo 		= 2; // 玩家数据
+  repeated ServerCommon.PlayerBaseInfo players = 3; //不包括自己
+}
+
+enum JoinSceneError
+{
+  VisitSceneError 	= 0; // 位置错误(可能是配表错了)
+  VisitSceneUnlocked	= 1; // 新手农庄未解锁
+  VisitSceneCrowded	= 2; // 访问的场景人太多了
+}
+
+message SCJoinSceneError
+{
+  JoinSceneError errCode = 1;
+}
+
+message SCPlayerJoinScene
+{
+  ServerCommon.PlayerBaseInfo playerInfo = 1; // 拉姆数据
+}
+
+message CSLeaveScene
+{
+}
+
+message SCLeaveScene
+{
+  uint64 playerid = 1;
+}
+
+// 进入视野
+message SCPlayerEnterScreen
+{
+  ServerCommon.PlayerBaseInfo playerInfo = 1;
+}
+
+// 离开视野
+message SCPlayerLeaveScreen
+{
+  uint64 playerid = 1;
+}
+
+// 同步场景内的单位信息(进场景同步-单位数据不包括玩家,玩家通过单独的协议同步)
+message SCSyncUnitsInfo
+{
+  repeated ServerCommon.UnitInfo units = 1;
+}
+
+// 单位进入视野范围
+message SCUnitEnterScreen
+{
+  ServerCommon.UnitInfo unit = 1;
+}
+
+// 单位离开视野范围
+message SCUnitLeaveScreen
+{
+  uint64 unitid = 1;
+}
+
+// 单位信息更新
+message SCUnitInfoUpdate
+{
+  ServerCommon.UnitInfo unit = 1;
+}

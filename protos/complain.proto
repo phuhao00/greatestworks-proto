@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package  complain;
+
+option go_package="github.com/phuhao00/greatestworks-proto/complain;complain";
+
+enum Complain
+{
+  Others           = 0;  // 其它
+  Abuse            = 1;  // 辱骂
+  Plugin           = 2;  // 外挂
+  Seduce           = 3;  // 诱导
+  AD               = 4;  // 广告
+  IllegalMsg       = 5;  // 违法消息
+  IllegalName      = 6;  // 违法名字
+  None             = 100; // 不选
+}

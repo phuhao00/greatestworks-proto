@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package  rank;
+
+option go_package="github.com/phuhao00/greatestworks-proto/rank;rank";
+
+
+message RankMember {
+  int64 index  	      = 1; // 排名
+  uint64 playerId     = 2; // 玩家ID
+  int64 score  	      = 3; // 分数
+  string name         = 4; // 昵称
+  uint32 head         = 5; // 头像
+  uint32 headFrame    = 6; // 头像框
+}
+
+message RankData {
+  uint32 rankID               = 1; // 排行榜ID
+  repeated RankMember members = 2; // 排行榜数据
+}

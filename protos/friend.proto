@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package  friend;
+
+option go_package="github.com/phuhao00/greatestworks-proto/friend;friend";
+
+//加好友的途径
+enum addFriendType
+{
+  NormalAdd = 0; //普通加好友
+  LetterAdd = 1; //留言板加好友
+}
+
+enum DegreeMethod {
+  Other             = 0;
+  PrivateChat       = 1;
+  GiftGiveMethod    = 2;
+}
+
+
+message FriendBaseInfo {
+  uint64 playerId                 = 1;  // 玩家ID
+  string name                     = 2;  // 昵称
+  bool isOnline                   = 3;  // 是否在线
+  uint32 frame                    = 4;  // 相框
+  uint32 head                     = 5;  // 头像
+  uint32 model                    = 6;  // 模型
+  string tag                      = 7;  // 备注
+  int64 offline                   = 8;  // 离线时间
+  int32 friendDegree              = 9;  // 好友度
+  addFriendType addType           = 10; // 加好友的途径
+  int32 baseLevel                 = 11; // 角色等级
+}
+
+message RadarSearchPlayerInfo {
+  float distance     = 1;
+  uint64 playerId    = 2;
+  uint32 bubbleFrame = 3; // 气泡框
+  uint32 head        = 4; // 头像
+  uint32 headFrame   = 5; // 头像框
+  string nickName    = 6; // 昵称
+}
+
+

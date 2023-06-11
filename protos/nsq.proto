@@ -1,28 +1,82 @@
 syntax = "proto3";
 
 package  nsq;
+import "sever_common.proto";
 
 option go_package="github.com/phuhao00/greatestworks-proto/nsq;nsq";
 
 enum NsqCommand{
     None=0;
-    KickOutPlayer=1;
+    KickOutPlayer           =1;
+    GmAddItem               =2;
+    ServerRestartNotice     =3;
+    BanUser                 =4;
+    ReloadConfigs           =5;
+    SetMaxOnlineCount       =6;
+    LimitUserAction         =7;
+    SystemClose             =8;
+
+    //friend
+    Friend_Request          = 1001;
+    Friend_Accept           = 1002;
+    Friend_REFUSE           = 1003; // 拒绝
+    Friend_DELETE           = 1004; // 删除
+    Friend_REFUSE_CD        = 1005;
+    //mail
+    MailSend                = 1101;
+    DeleteMail              = 1102;
+
 
 }
 
+message BanUserInfo
+{
+  uint64 userID                       = 1;
+  ServerCommon.KickReason kickReason  = 2;
+  string reason                       = 3;
+  string serId                        = 4; // 非0 表示此服务器玩家不踢
+}
 
 message ComplexMessage{
-    NsqCommand cmd=1;
-     bytes data=2;
-    int64 time=3;
+    NsqCommand cmd  = 1;
+     bytes data     = 2;
+    int64 time      = 3;
 }
 
-message Mail {
-
-}
 
 message FriendMessage{
   uint64 sender = 1;
   uint64 receiver = 2;
   NsqCommand cmd = 3;
 }
+
+message ReloadConfig
+{
+  string target = 1;
+  string serverID = 2;
+  string fileName = 3;
+  int64 sendTime = 4;
+}
+
+message SetMaxPlayerNum
+{
+  int32 maxPlayerNum = 1;
+}
+
+message SetLogLevel
+{
+  uint32 level = 1;
+}
+
+message CloseGameSystem
+{
+  uint32 sysID  = 1;
+  bool close    = 2;
+}
+
+message LimitUser
+{
+  uint64 userID                           = 1;
+  repeated  ServerCommon.LimitInfo infos  = 2;
+}
+
