@@ -10,11 +10,16 @@ enum MessageId {
   None =0;
   //gateway--------
   CSGatewayLogin       =10001;
-  CSGatewayLogout      =10002;
-  CSGatewayOnlineList  =10003;
-  CSGatewayJoinOnline  =10004;
-  CSReconnection       =10005;
-  SceneHeartbeat       =10006;
+  SCGatewayLogin       =10002;
+  CSGatewayLogout      =10003;
+  SCGatewayLogout      =10004;
+  CSGatewayOnlineList  =10005;
+  SCGatewayOnlineList  =10006;
+  CSGatewayJoinOnline  =10007;
+  SCGatewayJoinOnline  =10008;
+  CSReconnection       =10009;
+  SCReconnection       =10010;
+  SceneHeartbeat       =10011;
   //
   CSCreatePlayer=50001;
   SCCreatePlayer=50002;
