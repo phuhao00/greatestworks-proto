@@ -199,6 +199,18 @@
                 </li>
               
                 <li>
+                  <a href="#gateway.ClientOffline"><span class="badge">M</span>ClientOffline</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.ClientOnlineRet"><span class="badge">M</span>ClientOnlineRet</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.ClientWorld"><span class="badge">M</span>ClientWorld</a>
+                </li>
+              
+                <li>
                   <a href="#gateway.OnlineList"><span class="badge">M</span>OnlineList</a>
                 </li>
               
@@ -405,6 +417,18 @@
               
                 <li>
                   <a href="#gateway.CSReconnection"><span class="badge">M</span>CSReconnection</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.ClientOffline"><span class="badge">M</span>ClientOffline</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.ClientOnlineRet"><span class="badge">M</span>ClientOnlineRet</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.ClientWorld"><span class="badge">M</span>ClientWorld</a>
                 </li>
               
                 <li>
@@ -846,6 +870,10 @@
                   <a href="#ServerCommon.KickReason"><span class="badge">E</span>KickReason</a>
                 </li>
               
+                <li>
+                  <a href="#ServerCommon.ServerCategory"><span class="badge">E</span>ServerCategory</a>
+                </li>
+              
               
               
             </ul>
@@ -1066,6 +1094,250 @@
                   <td><a href="#int32">int32</a></td>
                   <td></td>
                   <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientOffline">ClientOffline</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>opType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>1-离线 2-切线(异地登录) </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientOnlineRet">ClientOnlineRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>charId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gold</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sceneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>players</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isNew</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>frame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>head</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>model</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>bubbleFrame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>silverCoin</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>level</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>exp</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>regTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reconnection</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>todayFirstLogin</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientWorld">ClientWorld</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>IsReconnected</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>remoteIp</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gatewayIp</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
@@ -2558,6 +2830,250 @@
                   <td><a href="#int32">int32</a></td>
                   <td></td>
                   <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientOffline">ClientOffline</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>opType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>1-离线 2-切线(异地登录) </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientOnlineRet">ClientOnlineRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>charId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gold</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sceneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>players</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isNew</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>frame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>head</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>model</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>bubbleFrame</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>silverCoin</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>level</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>exp</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>regTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reconnection</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>todayFirstLogin</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientWorld">ClientWorld</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>IsReconnected</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>remoteIp</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gatewayIp</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
@@ -4161,25 +4677,25 @@
               </tr>
             
               <tr>
-                <td>CSGatewayOnlineList</td>
+                <td>CSGatewayWorldList</td>
                 <td>10005</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>SCGatewayOnlineList</td>
+                <td>SCGatewayWorldList</td>
                 <td>10006</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>CSGatewayJoinOnline</td>
+                <td>CSGatewayJoinWorld</td>
                 <td>10007</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>SCGatewayJoinOnline</td>
+                <td>SCGatewayJoinWorld</td>
                 <td>10008</td>
                 <td><p></p></td>
               </tr>
@@ -4193,12 +4709,6 @@
               <tr>
                 <td>SCReconnection</td>
                 <td>10010</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SceneHeartbeat</td>
-                <td>10011</td>
                 <td><p></p></td>
               </tr>
             
@@ -4313,6 +4823,144 @@
               <tr>
                 <td>SCCardAction</td>
                 <td>300101</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>RegisterToGateway</td>
+                <td>70001</td>
+                <td><p>server</p></td>
+              </tr>
+            
+              <tr>
+                <td>RegisterToGatewayRet</td>
+                <td>70002</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>GatewayForwardPacket</td>
+                <td>70003</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ClientWorld</td>
+                <td>70004</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ClientWorldRet</td>
+                <td>70005</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ClientOffline</td>
+                <td>70006</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ClientOfflineRet</td>
+                <td>70007</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>RegisterToGame</td>
+                <td>70008</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>RegisterToGameRet</td>
+                <td>70009</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SrvMsgToWorldPlayer</td>
+                <td>70010</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SceneHeartbeat</td>
+                <td>80001</td>
+                <td><p>scene</p></td>
+              </tr>
+            
+              <tr>
+                <td>CSJoinScene</td>
+                <td>80002</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCJoinScene</td>
+                <td>80003</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCPlayerJoinScene</td>
+                <td>80004</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CSLeaveScene</td>
+                <td>80005</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCLeaveScene</td>
+                <td>80006</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCPlayerEnterScreen</td>
+                <td>80007</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCPlayerLeaveScreen</td>
+                <td>80008</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCPlayerContainer</td>
+                <td>80009</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCPlayerCAIS</td>
+                <td>80010</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CSPlayerMove</td>
+                <td>80011</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCPlayerMove</td>
+                <td>80012</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CSPlayerGMCmd</td>
+                <td>80013</td>
                 <td><p></p></td>
               </tr>
             
@@ -6563,6 +7211,47 @@
                 <td>NoResponse</td>
                 <td>6</td>
                 <td><p>未响应</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ServerCommon.ServerCategory">ServerCategory</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>Undefined</td>
+                <td>0</td>
+                <td><p>没定义</p></td>
+              </tr>
+            
+              <tr>
+                <td>Login</td>
+                <td>1</td>
+                <td><p>登录服</p></td>
+              </tr>
+            
+              <tr>
+                <td>Gateway</td>
+                <td>2</td>
+                <td><p>网关</p></td>
+              </tr>
+            
+              <tr>
+                <td>World</td>
+                <td>3</td>
+                <td><p>世界服，大厅</p></td>
+              </tr>
+            
+              <tr>
+                <td>DB</td>
+                <td>4</td>
+                <td><p></p></td>
               </tr>
             
           </tbody>

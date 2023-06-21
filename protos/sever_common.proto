@@ -137,4 +137,13 @@ message LimitInfo
   int64 ExpTime     = 4; // 过期时间
 }
 
+enum ServerCategory{
+
+   Undefined  = 0; //没定义
+   Login      = 1; //登录服
+   Gateway    = 2; //网关
+   World      = 3; //世界服，大厅
+   DB         = 4; //
+  
+}
 

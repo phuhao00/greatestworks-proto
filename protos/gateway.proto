@@ -123,3 +123,41 @@ message SCReconnection {
   uint32 ret = 1;  // 0-失败(失败返回正常登录流程) 1-成功
 }
 
+message ClientOnlineRet {
+  uint32 result         = 1;
+  uint64 userid         = 2;
+  int32 charId          = 3;
+  string name           = 4;
+  uint32 gold           = 5;
+  int32 sceneId         = 6;
+  int32 players         = 7; 
+  bool isNew            = 8;
+  uint32 frame          = 9; 
+  uint32 head           = 10;
+  uint32 model          = 11;
+  uint32 sex            = 12;
+  uint32 bubbleFrame    = 13;
+  int32  silverCoin     = 14;
+  int32  level          = 15;
+  int32  exp            = 16;
+  int64 regTime         = 17;
+  int64 serverTime      = 18;
+  bool reconnection     = 19;
+  bool todayFirstLogin  = 20;
+  uint32  procIndex     = 21;
+}
+
+message ClientWorld {
+  uint64 userid       = 1;
+  bool IsReconnected  = 2;
+  string remoteIp     = 3;
+  string gatewayIp    = 4;
+  string version      = 5;
+}
+
+
+message ClientOffline {
+  uint64 userid = 1;
+  uint32 opType = 2; // 1-离线 2-切线(异地登录)
+}
+

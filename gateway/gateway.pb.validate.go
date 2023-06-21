@@ -936,3 +936,254 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SCReconnectionValidationError{}
+
+// Validate checks the field values on ClientOnlineRet with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *ClientOnlineRet) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Result
+
+	// no validation rules for Userid
+
+	// no validation rules for CharId
+
+	// no validation rules for Name
+
+	// no validation rules for Gold
+
+	// no validation rules for SceneId
+
+	// no validation rules for Players
+
+	// no validation rules for IsNew
+
+	// no validation rules for Frame
+
+	// no validation rules for Head
+
+	// no validation rules for Model
+
+	// no validation rules for Sex
+
+	// no validation rules for BubbleFrame
+
+	// no validation rules for SilverCoin
+
+	// no validation rules for Level
+
+	// no validation rules for Exp
+
+	// no validation rules for RegTime
+
+	// no validation rules for ServerTime
+
+	// no validation rules for Reconnection
+
+	// no validation rules for TodayFirstLogin
+
+	// no validation rules for ProcIndex
+
+	return nil
+}
+
+// ClientOnlineRetValidationError is the validation error returned by
+// ClientOnlineRet.Validate if the designated constraints aren't met.
+type ClientOnlineRetValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ClientOnlineRetValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ClientOnlineRetValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ClientOnlineRetValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ClientOnlineRetValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ClientOnlineRetValidationError) ErrorName() string { return "ClientOnlineRetValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ClientOnlineRetValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sClientOnlineRet.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ClientOnlineRetValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ClientOnlineRetValidationError{}
+
+// Validate checks the field values on ClientWorld with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *ClientWorld) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Userid
+
+	// no validation rules for IsReconnected
+
+	// no validation rules for RemoteIp
+
+	// no validation rules for GatewayIp
+
+	// no validation rules for Version
+
+	return nil
+}
+
+// ClientWorldValidationError is the validation error returned by
+// ClientWorld.Validate if the designated constraints aren't met.
+type ClientWorldValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ClientWorldValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ClientWorldValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ClientWorldValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ClientWorldValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ClientWorldValidationError) ErrorName() string { return "ClientWorldValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ClientWorldValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sClientWorld.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ClientWorldValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ClientWorldValidationError{}
+
+// Validate checks the field values on ClientOffline with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *ClientOffline) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Userid
+
+	// no validation rules for OpType
+
+	return nil
+}
+
+// ClientOfflineValidationError is the validation error returned by
+// ClientOffline.Validate if the designated constraints aren't met.
+type ClientOfflineValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ClientOfflineValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ClientOfflineValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ClientOfflineValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ClientOfflineValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ClientOfflineValidationError) ErrorName() string { return "ClientOfflineValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ClientOfflineValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sClientOffline.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ClientOfflineValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ClientOfflineValidationError{}

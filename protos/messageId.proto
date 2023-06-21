@@ -13,13 +13,12 @@ enum MessageId {
   SCGatewayLogin       =10002;
   CSGatewayLogout      =10003;
   SCGatewayLogout      =10004;
-  CSGatewayOnlineList  =10005;
-  SCGatewayOnlineList  =10006;
-  CSGatewayJoinOnline  =10007;
-  SCGatewayJoinOnline  =10008;
+  CSGatewayWorldList   =10005;
+  SCGatewayWorldList   =10006;
+  CSGatewayJoinWorld   =10007;
+  SCGatewayJoinWorld   =10008;
   CSReconnection       =10009;
   SCReconnection       =10010;
-  SceneHeartbeat       =10011;
   //
   CSCreatePlayer=50001;
   SCCreatePlayer=50002;
@@ -47,4 +46,31 @@ enum MessageId {
   //card
   CSCardAction=300100;
   SCCardAction=300101;
+  
+  //server 
+  RegisterToGateway     = 70001;
+  RegisterToGatewayRet  = 70002;
+  GatewayForwardPacket  = 70003;
+  ClientWorld           = 70004;
+  ClientWorldRet        = 70005;
+  ClientOffline         = 70006;
+  ClientOfflineRet      = 70007;
+  RegisterToGame        = 70008;
+  RegisterToGameRet     = 70009;
+  SrvMsgToWorldPlayer   = 70010;
+
+  //scene
+  SceneHeartbeat           = 80001;
+  CSJoinScene              = 80002;
+  SCJoinScene              = 80003;
+  SCPlayerJoinScene        = 80004;
+  CSLeaveScene             = 80005;
+  SCLeaveScene             = 80006;
+  SCPlayerEnterScreen      = 80007;
+  SCPlayerLeaveScreen      = 80008;
+  SCPlayerContainer        = 80009;
+  SCPlayerCAIS             = 80010;
+  CSPlayerMove             = 80011;
+  SCPlayerMove             = 80012;
+  CSPlayerGMCmd            = 80013;
 }
