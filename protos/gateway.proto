@@ -123,6 +123,14 @@ message SCReconnection {
   uint32 ret = 1;  // 0-失败(失败返回正常登录流程) 1-成功
 }
 
+message ClientOnline {
+  uint64 userid     = 1;
+  bool reconnected  = 2;
+  string remoteIp   = 3;
+  string gatewayIp  = 4;
+  string version    = 5;
+}
+
 message ClientOnlineRet {
   uint32 result         = 1;
   uint64 userid         = 2;
@@ -161,3 +169,61 @@ message ClientOffline {
   uint32 opType = 2; // 1-离线 2-切线(异地登录)
 }
 
+message ClientOfflineRet {
+  uint64 userid = 1;
+  uint32 result = 2;
+  int32 players = 3; // 服务器当前人数
+  uint32 opType = 4; // 1-离线 2-切线(异地登录)
+  uint32  procIndex = 5; // 当前所在的服务器ID
+  string  version   = 6;
+}
+
+message RegisterToGateway {
+  string token           = 1;
+  string serverID        = 2;
+  uint32 serverType      = 3;
+  string serverAddr      = 4;
+  repeated uint32 msgids = 5;
+  uint32  procIndex      = 6;
+  string  name           = 7;
+  int32   maxPlayer      = 8; // 最大人数
+  int32   zoneId         = 9; //分区新增  在登录/聊天时，区分玩家要登录/聊天于的时哪个区，DB数据、online系统互通
+}
+
+message RegisterToGatewayRet {
+  uint32 result = 1;
+  int32  zoneId = 2; //分区新增  在登录/聊天时，区分玩家要登录/聊天于的时哪个区，DB数据、online系统互通
+}
+
+message UpdateOnlineInfo {
+  uint32  procIndex      = 1;
+  string  name           = 2;
+  int32   maxPlayer      = 3; // 最大人数
+}
+
+message UpdateOnlineInfoRet {uint32 result = 1; }
+
+message GatewayForwardPacket {
+  uint64 userid = 1;
+  int32 playerNumber = 2; // 将online在线人数，实时带给gateway
+  bytes data    = 3;
+}
+
+enum OnlineResult {
+  OnlineFailure = 0;
+  OnlineSuccess = 1;
+}
+
+message RegisterToGame {
+  string token      = 1;
+  string serverID   = 2;
+  uint32 serverType = 3;
+  string serverAddr = 4;
+  uint32 scrSerType = 5;
+  string serRpcAddr = 6;
+}
+
+message RegisterToGameRet {
+  uint32 result          = 1;
+  repeated uint32 msgIds = 2;
+}

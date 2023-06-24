@@ -147,3 +147,35 @@ enum ServerCategory{
   
 }
 
+
+message RegisterToGateway {
+  string token           = 1;
+  string serverID        = 2;
+  uint32 serverType      = 3;
+  string serverAddr      = 4;
+  repeated uint32 msgIds = 5;
+  uint32  procIndex      = 6;
+  string  name           = 7;
+  int32   maxPlayer      = 8;
+  int32   zoneId         = 9;
+}
+
+message RegisterToGatewayRet {
+  uint32 result = 1;
+  int32  zoneId = 2;
+}
+
+
+message UpdateOnlineInfo {
+  uint32  procIndex      = 1;
+  string  name           = 2;
+  int32   maxPlayer      = 3;
+}
+
+message UpdateOnlineInfoRet {uint32 result = 1; }
+
+message GatewayForwardPacket {
+  uint64 userid = 1;
+  int32 playerNumber = 2;
+  bytes data    = 3;
+}

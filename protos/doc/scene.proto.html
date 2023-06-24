@@ -416,6 +416,14 @@
                 </li>
               
                 <li>
+                  <a href="#gateway.ClientOfflineRet"><span class="badge">M</span>ClientOfflineRet</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.ClientOnline"><span class="badge">M</span>ClientOnline</a>
+                </li>
+              
+                <li>
                   <a href="#gateway.ClientOnlineRet"><span class="badge">M</span>ClientOnlineRet</a>
                 </li>
               
@@ -424,7 +432,27 @@
                 </li>
               
                 <li>
+                  <a href="#gateway.GatewayForwardPacket"><span class="badge">M</span>GatewayForwardPacket</a>
+                </li>
+              
+                <li>
                   <a href="#gateway.OnlineList"><span class="badge">M</span>OnlineList</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.RegisterToGame"><span class="badge">M</span>RegisterToGame</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.RegisterToGameRet"><span class="badge">M</span>RegisterToGameRet</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.RegisterToGateway"><span class="badge">M</span>RegisterToGateway</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.RegisterToGatewayRet"><span class="badge">M</span>RegisterToGatewayRet</a>
                 </li>
               
                 <li>
@@ -455,6 +483,14 @@
                   <a href="#gateway.SCRewardBoxNotify.RewardListEntry"><span class="badge">M</span>SCRewardBoxNotify.RewardListEntry</a>
                 </li>
               
+                <li>
+                  <a href="#gateway.UpdateOnlineInfo"><span class="badge">M</span>UpdateOnlineInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.UpdateOnlineInfoRet"><span class="badge">M</span>UpdateOnlineInfoRet</a>
+                </li>
+              
               
                 <li>
                   <a href="#gateway.GatewayErr"><span class="badge">E</span>GatewayErr</a>
@@ -462,6 +498,10 @@
               
                 <li>
                   <a href="#gateway.JoinErrorCode"><span class="badge">E</span>JoinErrorCode</a>
+                </li>
+              
+                <li>
+                  <a href="#gateway.OnlineResult"><span class="badge">E</span>OnlineResult</a>
                 </li>
               
               
@@ -826,6 +866,10 @@
                 </li>
               
                 <li>
+                  <a href="#ServerCommon.GatewayForwardPacket"><span class="badge">M</span>GatewayForwardPacket</a>
+                </li>
+              
+                <li>
                   <a href="#ServerCommon.InteractiveObj"><span class="badge">M</span>InteractiveObj</a>
                 </li>
               
@@ -838,11 +882,27 @@
                 </li>
               
                 <li>
+                  <a href="#ServerCommon.RegisterToGateway"><span class="badge">M</span>RegisterToGateway</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.RegisterToGatewayRet"><span class="badge">M</span>RegisterToGatewayRet</a>
+                </li>
+              
+                <li>
                   <a href="#ServerCommon.UnitActionData"><span class="badge">M</span>UnitActionData</a>
                 </li>
               
                 <li>
                   <a href="#ServerCommon.UnitInfo"><span class="badge">M</span>UnitInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.UpdateOnlineInfo"><span class="badge">M</span>UpdateOnlineInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.UpdateOnlineInfoRet"><span class="badge">M</span>UpdateOnlineInfoRet</a>
                 </li>
               
                 <li>
@@ -2396,6 +2456,115 @@
 
         
       
+        <h3 id="gateway.ClientOfflineRet">ClientOfflineRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>players</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>服务器当前人数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>opType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>1-离线 2-切线(异地登录) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>当前所在的服务器ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.ClientOnline">ClientOnline</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reconnected</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>remoteIp</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gatewayIp</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="gateway.ClientOnlineRet">ClientOnlineRet</h3>
         <p></p>
 
@@ -2610,6 +2779,43 @@
 
         
       
+        <h3 id="gateway.GatewayForwardPacket">GatewayForwardPacket</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>playerNumber</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>将online在线人数，实时带给gateway </p></td>
+                </tr>
+              
+                <tr>
+                  <td>data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="gateway.OnlineList">OnlineList</h3>
         <p></p>
 
@@ -2667,6 +2873,203 @@
                   <td><a href="#int32">int32</a></td>
                   <td></td>
                   <td><p>分区新增 在登录时，区分玩家要登录的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.RegisterToGame">RegisterToGame</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverAddr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>scrSerType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serRpcAddr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.RegisterToGameRet">RegisterToGameRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>msgIds</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.RegisterToGateway">RegisterToGateway</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverAddr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>msgids</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>maxPlayer</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>最大人数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增  在登录/聊天时，区分玩家要登录/聊天于的时哪个区，DB数据、online系统互通 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.RegisterToGatewayRet">RegisterToGatewayRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>分区新增  在登录/聊天时，区分玩家要登录/聊天于的时哪个区，DB数据、online系统互通 </p></td>
                 </tr>
               
             </tbody>
@@ -2981,6 +3384,66 @@
 
         
       
+        <h3 id="gateway.UpdateOnlineInfo">UpdateOnlineInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>maxPlayer</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>最大人数 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="gateway.UpdateOnlineInfoRet">UpdateOnlineInfoRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
 
       
         <h3 id="gateway.GatewayErr">GatewayErr</h3>
@@ -3084,6 +3547,29 @@
                 <td>JoinZoneIdError</td>
                 <td>4</td>
                 <td><p>区错误</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="gateway.OnlineResult">OnlineResult</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>OnlineFailure</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>OnlineSuccess</td>
+                <td>1</td>
+                <td><p></p></td>
               </tr>
             
           </tbody>
@@ -5953,6 +6439,43 @@
 
         
       
+        <h3 id="ServerCommon.GatewayForwardPacket">GatewayForwardPacket</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>userid</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>playerNumber</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="ServerCommon.InteractiveObj">InteractiveObj</h3>
         <p></p>
 
@@ -6393,6 +6916,115 @@
 
         
       
+        <h3 id="ServerCommon.RegisterToGateway">RegisterToGateway</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverAddr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>msgIds</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>maxPlayer</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.RegisterToGatewayRet">RegisterToGatewayRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="ServerCommon.UnitActionData">UnitActionData</h3>
         <p></p>
 
@@ -6585,6 +7217,66 @@
                   <td><a href="#bool">bool</a></td>
                   <td></td>
                   <td><p>是否在工作中 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.UpdateOnlineInfo">UpdateOnlineInfo</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>maxPlayer</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.UpdateOnlineInfoRet">UpdateOnlineInfoRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
                 </tr>
               
             </tbody>

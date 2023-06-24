@@ -665,3 +665,370 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = LimitInfoValidationError{}
+
+// Validate checks the field values on RegisterToGateway with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *RegisterToGateway) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Token
+
+	// no validation rules for ServerID
+
+	// no validation rules for ServerType
+
+	// no validation rules for ServerAddr
+
+	// no validation rules for ProcIndex
+
+	// no validation rules for Name
+
+	// no validation rules for MaxPlayer
+
+	// no validation rules for ZoneId
+
+	return nil
+}
+
+// RegisterToGatewayValidationError is the validation error returned by
+// RegisterToGateway.Validate if the designated constraints aren't met.
+type RegisterToGatewayValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e RegisterToGatewayValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e RegisterToGatewayValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e RegisterToGatewayValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e RegisterToGatewayValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e RegisterToGatewayValidationError) ErrorName() string {
+	return "RegisterToGatewayValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e RegisterToGatewayValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sRegisterToGateway.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = RegisterToGatewayValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = RegisterToGatewayValidationError{}
+
+// Validate checks the field values on RegisterToGatewayRet with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *RegisterToGatewayRet) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Result
+
+	// no validation rules for ZoneId
+
+	return nil
+}
+
+// RegisterToGatewayRetValidationError is the validation error returned by
+// RegisterToGatewayRet.Validate if the designated constraints aren't met.
+type RegisterToGatewayRetValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e RegisterToGatewayRetValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e RegisterToGatewayRetValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e RegisterToGatewayRetValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e RegisterToGatewayRetValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e RegisterToGatewayRetValidationError) ErrorName() string {
+	return "RegisterToGatewayRetValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e RegisterToGatewayRetValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sRegisterToGatewayRet.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = RegisterToGatewayRetValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = RegisterToGatewayRetValidationError{}
+
+// Validate checks the field values on UpdateOnlineInfo with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *UpdateOnlineInfo) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for ProcIndex
+
+	// no validation rules for Name
+
+	// no validation rules for MaxPlayer
+
+	return nil
+}
+
+// UpdateOnlineInfoValidationError is the validation error returned by
+// UpdateOnlineInfo.Validate if the designated constraints aren't met.
+type UpdateOnlineInfoValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e UpdateOnlineInfoValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e UpdateOnlineInfoValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e UpdateOnlineInfoValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e UpdateOnlineInfoValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e UpdateOnlineInfoValidationError) ErrorName() string { return "UpdateOnlineInfoValidationError" }
+
+// Error satisfies the builtin error interface
+func (e UpdateOnlineInfoValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sUpdateOnlineInfo.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = UpdateOnlineInfoValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = UpdateOnlineInfoValidationError{}
+
+// Validate checks the field values on UpdateOnlineInfoRet with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *UpdateOnlineInfoRet) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Result
+
+	return nil
+}
+
+// UpdateOnlineInfoRetValidationError is the validation error returned by
+// UpdateOnlineInfoRet.Validate if the designated constraints aren't met.
+type UpdateOnlineInfoRetValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e UpdateOnlineInfoRetValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e UpdateOnlineInfoRetValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e UpdateOnlineInfoRetValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e UpdateOnlineInfoRetValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e UpdateOnlineInfoRetValidationError) ErrorName() string {
+	return "UpdateOnlineInfoRetValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e UpdateOnlineInfoRetValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sUpdateOnlineInfoRet.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = UpdateOnlineInfoRetValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = UpdateOnlineInfoRetValidationError{}
+
+// Validate checks the field values on GatewayForwardPacket with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *GatewayForwardPacket) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Userid
+
+	// no validation rules for PlayerNumber
+
+	// no validation rules for Data
+
+	return nil
+}
+
+// GatewayForwardPacketValidationError is the validation error returned by
+// GatewayForwardPacket.Validate if the designated constraints aren't met.
+type GatewayForwardPacketValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GatewayForwardPacketValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GatewayForwardPacketValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GatewayForwardPacketValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GatewayForwardPacketValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GatewayForwardPacketValidationError) ErrorName() string {
+	return "GatewayForwardPacketValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GatewayForwardPacketValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGatewayForwardPacket.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GatewayForwardPacketValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GatewayForwardPacketValidationError{}
