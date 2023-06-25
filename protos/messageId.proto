@@ -51,8 +51,8 @@ enum MessageId {
   RegisterToGateway     = 70001;
   RegisterToGatewayRet  = 70002;
   GatewayForwardPacket  = 70003;
-  ClientWorld           = 70004;
-  ClientWorldRet        = 70005;
+  ClientOnline          = 70004;
+  ClientOnlineRet       = 70005;
   ClientOffline         = 70006;
   ClientOfflineRet      = 70007;
   RegisterToGame        = 70008;
