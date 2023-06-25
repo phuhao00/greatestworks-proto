@@ -149,15 +149,15 @@ enum ServerCategory{
 
 
 message RegisterToGateway {
-  string token           = 1;
-  string serverID        = 2;
-  uint32 serverType      = 3;
-  string serverAddr      = 4;
-  repeated uint32 msgIds = 5;
-  uint32  procIndex      = 6;
-  string  name           = 7;
-  int32   maxPlayer      = 8;
-  int32   zoneId         = 9;
+  string token                   = 1;
+  string serverID                = 2;
+  ServerCategory serverType      = 3;
+  string serverAddr              = 4;
+  repeated uint32 msgIds         = 5;
+  uint32  procIndex              = 6;
+  string  name                   = 7;
+  int32   maxPlayer              = 8;
+  int32   zoneId                 = 9;
 }
 
 message RegisterToGatewayRet {
