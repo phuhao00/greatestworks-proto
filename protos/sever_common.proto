@@ -179,3 +179,11 @@ message GatewayForwardPacket {
   int32 playerNumber = 2;
   bytes data    = 3;
 }
+
+
+message SCKick
+{
+  KickReason kick = 1;
+  string     contend = 2;
+}
+

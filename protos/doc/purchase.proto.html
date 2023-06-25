@@ -846,6 +846,10 @@
                 </li>
               
                 <li>
+                  <a href="#ServerCommon.SCKick"><span class="badge">M</span>SCKick</a>
+                </li>
+              
+                <li>
                   <a href="#ServerCommon.UnitActionData"><span class="badge">M</span>UnitActionData</a>
                 </li>
               
@@ -1654,6 +1658,30 @@
               <tr>
                 <td>purchase_max</td>
                 <td>300000</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>lose_cur_con</td>
+                <td>399994</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>being_re_conn</td>
+                <td>399995</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>join_online_not_open</td>
+                <td>399996</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>join_zone_id_error</td>
+                <td>399997</td>
                 <td><p></p></td>
               </tr>
             
@@ -4574,6 +4602,12 @@
               </tr>
             
               <tr>
+                <td>SCKick</td>
+                <td>70011</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>SceneHeartbeat</td>
                 <td>80001</td>
                 <td><p>scene</p></td>
@@ -6695,6 +6729,36 @@
                 <tr>
                   <td>zoneId</td>
                   <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.SCKick">SCKick</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>kick</td>
+                  <td><a href="#ServerCommon.KickReason">KickReason</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>contend</td>
+                  <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>

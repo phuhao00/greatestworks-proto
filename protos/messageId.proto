@@ -58,6 +58,8 @@ enum MessageId {
   RegisterToGame        = 70008;
   RegisterToGameRet     = 70009;
   SrvMsgToWorldPlayer   = 70010;
+  SCKick                = 70011;
+
 
   //scene
   SceneHeartbeat           = 80001;
