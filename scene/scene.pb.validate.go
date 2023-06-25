@@ -248,15 +248,15 @@ func (m *CSJoinScene) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Sceneid
+	// no validation rules for SceneId
 
-	// no validation rules for Birthid
+	// no validation rules for BirthId
 
-	// no validation rules for Playerid
+	// no validation rules for PlayerId
 
 	// no validation rules for Passwd
 
-	// no validation rules for Isview
+	// no validation rules for IsView
 
 	// no validation rules for JumpType
 
@@ -774,7 +774,7 @@ func (m *SCPlayerLeaveScreen) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Playerid
+	// no validation rules for PlayerId
 
 	return nil
 }
@@ -1000,7 +1000,7 @@ func (m *SCUnitLeaveScreen) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Unitid
+	// no validation rules for UnitId
 
 	return nil
 }

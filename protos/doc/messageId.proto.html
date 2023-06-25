@@ -248,7 +248,15 @@
             <ul>
               
                 <li>
+                  <a href="#chat.CSCrossSrvChatMsg"><span class="badge">M</span>CSCrossSrvChatMsg</a>
+                </li>
+              
+                <li>
                   <a href="#chat.PrivateChatMsg"><span class="badge">M</span>PrivateChatMsg</a>
+                </li>
+              
+                <li>
+                  <a href="#chat.SCCrossSrvChatMsg"><span class="badge">M</span>SCCrossSrvChatMsg</a>
                 </li>
               
                 <li>
@@ -1163,6 +1171,18 @@
               </tr>
             
               <tr>
+                <td>UpdateOnlineInfo</td>
+                <td>70012</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>UpdateOnlineInfoRet</td>
+                <td>70013</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>SceneHeartbeat</td>
                 <td>80001</td>
                 <td><p>scene</p></td>
@@ -1472,6 +1492,50 @@
       <p></p>
 
       
+        <h3 id="chat.CSCrossSrvChatMsg">CSCrossSrvChatMsg</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>content</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isVoice</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>messageType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isUseTrumpet</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="chat.PrivateChatMsg">PrivateChatMsg</h3>
         <p></p>
 
@@ -1522,6 +1586,106 @@
                   <td><a href="#int32">int32</a></td>
                   <td></td>
                   <td><p>好友度 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="chat.SCCrossSrvChatMsg">SCCrossSrvChatMsg</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>content</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>聊天内容  (脏词过滤后的) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Sender</td>
+                  <td><a href="#chat.chatBaseInfo">chatBaseInfo</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>receiver</td>
+                  <td><a href="#chat.chatBaseInfo">chatBaseInfo</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isVoice</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否语音聊天 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>SendTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p>发送时间 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>degree</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>好友度 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneID</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>区服ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>messageType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>消息类型： 0 本区消息  1 跨区消息（世界聊天）  2 跨服消息（指定服范围） </p></td>
+                </tr>
+              
+                <tr>
+                  <td>procIndex</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>发送消息的玩家所在的 服进程id </p></td>
+                </tr>
+              
+                <tr>
+                  <td>rangeOfSrv</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>指定的跨服区间， 配表指定的。  rangeOfSrv = 5 表示  procIndex 为 1~5 的玩家 发送的跨服消息，只会广播给 所有的 1~5 服玩家 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>isUseTrumpet</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>是否使用喇叭 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>oldContent</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>聊天内容  (脏词过滤前的) </p></td>
                 </tr>
               
             </tbody>
@@ -4772,6 +4936,18 @@
               </tr>
             
               <tr>
+                <td>UpdateOnlineInfo</td>
+                <td>70012</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>UpdateOnlineInfoRet</td>
+                <td>70013</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>SceneHeartbeat</td>
                 <td>80001</td>
                 <td><p>scene</p></td>
@@ -5858,24 +6034,24 @@
             <tbody>
               
                 <tr>
-                  <td>sceneid</td>
+                  <td>sceneId</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
                   <td><p>跳转的场景ID </p></td>
                 </tr>
               
                 <tr>
-                  <td>birthid</td>
+                  <td>birthId</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td></td>
                   <td><p>传送点ID </p></td>
                 </tr>
               
                 <tr>
-                  <td>playerid</td>
+                  <td>playerId</td>
                   <td><a href="#uint64">uint64</a></td>
                   <td></td>
-                  <td><p>如果playerid != 0 表示进入玩家家园场景 </p></td>
+                  <td><p>如果playerId != 0 表示进入玩家家园场景 </p></td>
                 </tr>
               
                 <tr>
@@ -5893,7 +6069,7 @@
                 </tr>
               
                 <tr>
-                  <td>isview</td>
+                  <td>isView</td>
                   <td><a href="#bool">bool</a></td>
                   <td></td>
                   <td><p>是否观众 </p></td>
@@ -6110,7 +6286,7 @@
             <tbody>
               
                 <tr>
-                  <td>playerid</td>
+                  <td>playerId</td>
                   <td><a href="#uint64">uint64</a></td>
                   <td></td>
                   <td><p> </p></td>
@@ -6202,7 +6378,7 @@
             <tbody>
               
                 <tr>
-                  <td>unitid</td>
+                  <td>unitId</td>
                   <td><a href="#uint64">uint64</a></td>
                   <td></td>
                   <td><p> </p></td>

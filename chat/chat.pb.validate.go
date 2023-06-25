@@ -277,3 +277,185 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = ChatStatisticsValidationError{}
+
+// Validate checks the field values on CSCrossSrvChatMsg with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *CSCrossSrvChatMsg) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Content
+
+	// no validation rules for IsVoice
+
+	// no validation rules for MessageType
+
+	// no validation rules for IsUseTrumpet
+
+	return nil
+}
+
+// CSCrossSrvChatMsgValidationError is the validation error returned by
+// CSCrossSrvChatMsg.Validate if the designated constraints aren't met.
+type CSCrossSrvChatMsgValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e CSCrossSrvChatMsgValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e CSCrossSrvChatMsgValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e CSCrossSrvChatMsgValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e CSCrossSrvChatMsgValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e CSCrossSrvChatMsgValidationError) ErrorName() string {
+	return "CSCrossSrvChatMsgValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e CSCrossSrvChatMsgValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sCSCrossSrvChatMsg.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = CSCrossSrvChatMsgValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = CSCrossSrvChatMsgValidationError{}
+
+// Validate checks the field values on SCCrossSrvChatMsg with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *SCCrossSrvChatMsg) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Content
+
+	if v, ok := interface{}(m.GetSender()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return SCCrossSrvChatMsgValidationError{
+				field:  "Sender",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetReceiver()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return SCCrossSrvChatMsgValidationError{
+				field:  "Receiver",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	// no validation rules for IsVoice
+
+	// no validation rules for SendTime
+
+	// no validation rules for Degree
+
+	// no validation rules for ZoneID
+
+	// no validation rules for MessageType
+
+	// no validation rules for ProcIndex
+
+	// no validation rules for RangeOfSrv
+
+	// no validation rules for IsUseTrumpet
+
+	// no validation rules for OldContent
+
+	return nil
+}
+
+// SCCrossSrvChatMsgValidationError is the validation error returned by
+// SCCrossSrvChatMsg.Validate if the designated constraints aren't met.
+type SCCrossSrvChatMsgValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e SCCrossSrvChatMsgValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e SCCrossSrvChatMsgValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e SCCrossSrvChatMsgValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e SCCrossSrvChatMsgValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e SCCrossSrvChatMsgValidationError) ErrorName() string {
+	return "SCCrossSrvChatMsgValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e SCCrossSrvChatMsgValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sSCCrossSrvChatMsg.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = SCCrossSrvChatMsgValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = SCCrossSrvChatMsgValidationError{}

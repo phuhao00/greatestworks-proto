@@ -59,6 +59,8 @@ enum MessageId {
   RegisterToGameRet     = 70009;
   SrvMsgToWorldPlayer   = 70010;
   SCKick                = 70011;
+  UpdateOnlineInfo      = 70012;
+  UpdateOnlineInfoRet   = 70013;
 
 
   //scene

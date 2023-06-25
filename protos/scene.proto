@@ -25,12 +25,12 @@ message SCCanJoinScene
 
 message CSJoinScene
 {
-  int32 sceneid			= 1; // 跳转的场景ID
-  uint32 birthid			= 2; // 传送点ID
-  uint64 playerid 		= 3; // 如果playerid != 0 表示进入玩家家园场景
+  int32 sceneId			= 1; // 跳转的场景ID
+  uint32 birthId			= 2; // 传送点ID
+  uint64 playerId 		= 3; // 如果playerId != 0 表示进入玩家家园场景
   string passwd   		= 4; //
   repeated uint32 gift 	= 5; // 伴手礼
-  bool   isview   		= 6; // 是否观众
+  bool   isView   		= 6; // 是否观众
   uint32 jumpType 		= 7; // 切场景原因类型(0:传送阵 1:任务切场景 2:区块出生点)
   uint32 param			= 8; // jumpType=1 param=task step id
   string portal			= 9; // 传送门数据
@@ -78,7 +78,7 @@ message SCPlayerEnterScreen
 // 离开视野
 message SCPlayerLeaveScreen
 {
-  uint64 playerid = 1;
+  uint64 playerId = 1;
 }
 
 // 同步场景内的单位信息(进场景同步-单位数据不包括玩家,玩家通过单独的协议同步)
@@ -96,7 +96,7 @@ message SCUnitEnterScreen
 // 单位离开视野范围
 message SCUnitLeaveScreen
 {
-  uint64 unitid = 1;
+  uint64 unitId = 1;
 }
 
 // 单位信息更新
