@@ -61,6 +61,9 @@ enum MessageId {
   SCKick                = 70011;
   UpdateOnlineInfo      = 70012;
   UpdateOnlineInfoRet   = 70013;
+  BroadcastChatMsg      = 70014;
+  CSCrossSrvChatMsg     = 70015;
+  SCCrossSrvChatMsg     = 70016;
 
 
   //scene
