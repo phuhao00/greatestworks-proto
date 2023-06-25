@@ -64,6 +64,7 @@ enum MessageId {
   BroadcastChatMsg      = 70014;
   CSCrossSrvChatMsg     = 70015;
   SCCrossSrvChatMsg     = 70016;
+  SCSystemMessage       = 70017;
 
 
   //scene

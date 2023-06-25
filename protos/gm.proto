@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+package  gm;
+
+option go_package="github.com/phuhao00/greatestworks-proto/gm;gm";
+

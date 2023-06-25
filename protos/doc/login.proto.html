@@ -288,6 +288,10 @@
                 </li>
               
                 <li>
+                  <a href="#chat.SCSystemMessage"><span class="badge">M</span>SCSystemMessage</a>
+                </li>
+              
+                <li>
                   <a href="#chat.chatBaseInfo"><span class="badge">M</span>chatBaseInfo</a>
                 </li>
               
@@ -479,6 +483,17 @@
                 <li>
                   <a href="#gateway.OnlineResult"><span class="badge">E</span>OnlineResult</a>
                 </li>
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#gm.proto">gm.proto</a>
+            <ul>
+              
               
               
               
@@ -1792,7 +1807,7 @@
                   <td>content</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p>聊天内容  (脏词过滤后的) </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
@@ -1813,63 +1828,128 @@
                   <td>isVoice</td>
                   <td><a href="#bool">bool</a></td>
                   <td></td>
-                  <td><p>是否语音聊天 </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>SendTime</td>
                   <td><a href="#int64">int64</a></td>
                   <td></td>
-                  <td><p>发送时间 </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>degree</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>好友度 </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>zoneID</td>
                   <td><a href="#int32">int32</a></td>
                   <td></td>
-                  <td><p>区服ID </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>messageType</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td></td>
-                  <td><p>消息类型： 0 本区消息  1 跨区消息（世界聊天）  2 跨服消息（指定服范围） </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>procIndex</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td></td>
-                  <td><p>发送消息的玩家所在的 服进程id </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>rangeOfSrv</td>
                   <td><a href="#uint32">uint32</a></td>
                   <td></td>
-                  <td><p>指定的跨服区间， 配表指定的。  rangeOfSrv = 5 表示  procIndex 为 1~5 的玩家 发送的跨服消息，只会广播给 所有的 1~5 服玩家 </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>isUseTrumpet</td>
                   <td><a href="#bool">bool</a></td>
                   <td></td>
-                  <td><p>是否使用喇叭 </p></td>
+                  <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>oldContent</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p>聊天内容  (脏词过滤前的) </p></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="chat.SCSystemMessage">SCSystemMessage</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>content</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>msgType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sendTime</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>language</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>paras</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>modules</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>channels</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
                 </tr>
               
             </tbody>
@@ -3802,6 +3882,20 @@
     
       
       <div class="file-heading">
+        <h2 id="gm.proto">gm.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
         <h2 id="grid.proto">grid.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
@@ -5146,6 +5240,12 @@
               <tr>
                 <td>SCCrossSrvChatMsg</td>
                 <td>70016</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SCSystemMessage</td>
+                <td>70017</td>
                 <td><p></p></td>
               </tr>
             
