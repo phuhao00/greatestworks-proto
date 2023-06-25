@@ -15,4 +15,8 @@ enum ErrCode {
 
    purchase_max=300000;
 
+   gateway_verify          = 399998;
+   gateway_repeated_verify = 399999;
+   gateway_max             = 400000;
+
 }
