@@ -187,3 +187,11 @@ message SCKick
   string     contend = 2;
 }
 
+//服务注册状态
+enum ServerRegisterStatus{
+  Fail    =0;
+  OK      =1;
+  Unknown =2;
+}
+
+
