@@ -54,11 +54,21 @@ message SCSendChatMsg{
 }
 
 message ChatMessage{
-  string Content =1;
+  string Content       =1;
   repeated bytes  extra=2;
 }
 
 message Test{
     attribute.TestImport t =1;
+}
+
+message PlayerMsgData{
+  uint64 PlayerID =1;
+  string ServerID =2;
+  bytes  Data     =3;
+}
+
+message PlayerSyncData  {
+ bytes Data =1;
 }
 

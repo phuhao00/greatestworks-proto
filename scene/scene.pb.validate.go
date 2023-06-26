@@ -1135,3 +1135,231 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SCUnitInfoUpdateValidationError{}
+
+// Validate checks the field values on SceneMsgData with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *SceneMsgData) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for SceneID
+
+	// no validation rules for Data
+
+	return nil
+}
+
+// SceneMsgDataValidationError is the validation error returned by
+// SceneMsgData.Validate if the designated constraints aren't met.
+type SceneMsgDataValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e SceneMsgDataValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e SceneMsgDataValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e SceneMsgDataValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e SceneMsgDataValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e SceneMsgDataValidationError) ErrorName() string { return "SceneMsgDataValidationError" }
+
+// Error satisfies the builtin error interface
+func (e SceneMsgDataValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sSceneMsgData.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = SceneMsgDataValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = SceneMsgDataValidationError{}
+
+// Validate checks the field values on AoiMsgData with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *AoiMsgData) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for MessageId
+
+	// no validation rules for Msg
+
+	// no validation rules for IncludeSelf
+
+	// no validation rules for PlayerID
+
+	return nil
+}
+
+// AoiMsgDataValidationError is the validation error returned by
+// AoiMsgData.Validate if the designated constraints aren't met.
+type AoiMsgDataValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e AoiMsgDataValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e AoiMsgDataValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e AoiMsgDataValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e AoiMsgDataValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e AoiMsgDataValidationError) ErrorName() string { return "AoiMsgDataValidationError" }
+
+// Error satisfies the builtin error interface
+func (e AoiMsgDataValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sAoiMsgData.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = AoiMsgDataValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = AoiMsgDataValidationError{}
+
+// Validate checks the field values on JoinSceneData with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *JoinSceneData) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for PreSceneID
+
+	// no validation rules for JumpType
+
+	// no validation rules for JumpParam
+
+	// no validation rules for BirthIdx
+
+	// no validation rules for NickName
+
+	// no validation rules for Model
+
+	// no validation rules for PosX
+
+	// no validation rules for PosY
+
+	// no validation rules for PosZ
+
+	// no validation rules for Orientation
+
+	// no validation rules for VipLv
+
+	return nil
+}
+
+// JoinSceneDataValidationError is the validation error returned by
+// JoinSceneData.Validate if the designated constraints aren't met.
+type JoinSceneDataValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e JoinSceneDataValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e JoinSceneDataValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e JoinSceneDataValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e JoinSceneDataValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e JoinSceneDataValidationError) ErrorName() string { return "JoinSceneDataValidationError" }
+
+// Error satisfies the builtin error interface
+func (e JoinSceneDataValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sJoinSceneData.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = JoinSceneDataValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = JoinSceneDataValidationError{}

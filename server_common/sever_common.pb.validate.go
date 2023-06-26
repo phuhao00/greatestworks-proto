@@ -1100,3 +1100,214 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SCKickValidationError{}
+
+// Validate checks the field values on ServerMsgData with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *ServerMsgData) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for PlayerID
+
+	// no validation rules for ServerID
+
+	// no validation rules for Data
+
+	return nil
+}
+
+// ServerMsgDataValidationError is the validation error returned by
+// ServerMsgData.Validate if the designated constraints aren't met.
+type ServerMsgDataValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ServerMsgDataValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ServerMsgDataValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ServerMsgDataValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ServerMsgDataValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ServerMsgDataValidationError) ErrorName() string { return "ServerMsgDataValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ServerMsgDataValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sServerMsgData.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ServerMsgDataValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ServerMsgDataValidationError{}
+
+// Validate checks the field values on BroadcastMsgData with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *BroadcastMsgData) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for MessageId
+
+	// no validation rules for Msg
+
+	return nil
+}
+
+// BroadcastMsgDataValidationError is the validation error returned by
+// BroadcastMsgData.Validate if the designated constraints aren't met.
+type BroadcastMsgDataValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e BroadcastMsgDataValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e BroadcastMsgDataValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e BroadcastMsgDataValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e BroadcastMsgDataValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e BroadcastMsgDataValidationError) ErrorName() string { return "BroadcastMsgDataValidationError" }
+
+// Error satisfies the builtin error interface
+func (e BroadcastMsgDataValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sBroadcastMsgData.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = BroadcastMsgDataValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = BroadcastMsgDataValidationError{}
+
+// Validate checks the field values on GameMsgData with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *GameMsgData) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for PlayerID
+
+	// no validation rules for ServerID
+
+	// no validation rules for Data
+
+	return nil
+}
+
+// GameMsgDataValidationError is the validation error returned by
+// GameMsgData.Validate if the designated constraints aren't met.
+type GameMsgDataValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GameMsgDataValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GameMsgDataValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GameMsgDataValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GameMsgDataValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GameMsgDataValidationError) ErrorName() string { return "GameMsgDataValidationError" }
+
+// Error satisfies the builtin error interface
+func (e GameMsgDataValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGameMsgData.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GameMsgDataValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GameMsgDataValidationError{}

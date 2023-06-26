@@ -608,6 +608,116 @@ func (x *Test) GetT() *attribute.TestImport {
 	return nil
 }
 
+type PlayerMsgData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PlayerID uint64 `protobuf:"varint,1,opt,name=PlayerID,proto3" json:"PlayerID,omitempty"`
+	ServerID string `protobuf:"bytes,2,opt,name=ServerID,proto3" json:"ServerID,omitempty"`
+	Data     []byte `protobuf:"bytes,3,opt,name=Data,proto3" json:"Data,omitempty"`
+}
+
+func (x *PlayerMsgData) Reset() {
+	*x = PlayerMsgData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_player_proto_msgTypes[12]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerMsgData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerMsgData) ProtoMessage() {}
+
+func (x *PlayerMsgData) ProtoReflect() protoreflect.Message {
+	mi := &file_player_proto_msgTypes[12]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerMsgData.ProtoReflect.Descriptor instead.
+func (*PlayerMsgData) Descriptor() ([]byte, []int) {
+	return file_player_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *PlayerMsgData) GetPlayerID() uint64 {
+	if x != nil {
+		return x.PlayerID
+	}
+	return 0
+}
+
+func (x *PlayerMsgData) GetServerID() string {
+	if x != nil {
+		return x.ServerID
+	}
+	return ""
+}
+
+func (x *PlayerMsgData) GetData() []byte {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
+type PlayerSyncData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Data []byte `protobuf:"bytes,1,opt,name=Data,proto3" json:"Data,omitempty"`
+}
+
+func (x *PlayerSyncData) Reset() {
+	*x = PlayerSyncData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_player_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PlayerSyncData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PlayerSyncData) ProtoMessage() {}
+
+func (x *PlayerSyncData) ProtoReflect() protoreflect.Message {
+	mi := &file_player_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PlayerSyncData.ProtoReflect.Descriptor instead.
+func (*PlayerSyncData) Descriptor() ([]byte, []int) {
+	return file_player_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *PlayerSyncData) GetData() []byte {
+	if x != nil {
+		return x.Data
+	}
+	return nil
+}
+
 var File_player_proto protoreflect.FileDescriptor
 
 var file_player_proto_rawDesc = []byte{
@@ -647,12 +757,20 @@ var file_player_proto_rawDesc = []byte{
 	0x20, 0x03, 0x28, 0x0c, 0x52, 0x05, 0x65, 0x78, 0x74, 0x72, 0x61, 0x22, 0x2b, 0x0a, 0x04, 0x54,
 	0x65, 0x73, 0x74, 0x12, 0x23, 0x0a, 0x01, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x15,
 	0x2e, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x2e, 0x54, 0x65, 0x73, 0x74, 0x49,
-	0x6d, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x01, 0x74, 0x42, 0x41, 0x5a, 0x35, 0x67, 0x69, 0x74, 0x68,
-	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x70, 0x68, 0x75, 0x68, 0x61, 0x6f, 0x30, 0x30, 0x2f,
-	0x67, 0x72, 0x65, 0x61, 0x74, 0x65, 0x73, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x73, 0x2d, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x3b, 0x70, 0x6c, 0x61, 0x79, 0x65,
-	0x72, 0xaa, 0x02, 0x07, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x6d, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x01, 0x74, 0x22, 0x5b, 0x0a, 0x0d, 0x50, 0x6c, 0x61, 0x79,
+	0x65, 0x72, 0x4d, 0x73, 0x67, 0x44, 0x61, 0x74, 0x61, 0x12, 0x1a, 0x0a, 0x08, 0x50, 0x6c, 0x61,
+	0x79, 0x65, 0x72, 0x49, 0x44, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x08, 0x50, 0x6c, 0x61,
+	0x79, 0x65, 0x72, 0x49, 0x44, 0x12, 0x1a, 0x0a, 0x08, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x49,
+	0x44, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x49,
+	0x44, 0x12, 0x12, 0x0a, 0x04, 0x44, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0c, 0x52,
+	0x04, 0x44, 0x61, 0x74, 0x61, 0x22, 0x24, 0x0a, 0x0e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x53,
+	0x79, 0x6e, 0x63, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a, 0x04, 0x44, 0x61, 0x74, 0x61, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x44, 0x61, 0x74, 0x61, 0x42, 0x41, 0x5a, 0x35, 0x67,
+	0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x70, 0x68, 0x75, 0x68, 0x61, 0x6f,
+	0x30, 0x30, 0x2f, 0x67, 0x72, 0x65, 0x61, 0x74, 0x65, 0x73, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x73,
+	0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x3b, 0x70, 0x6c,
+	0x61, 0x79, 0x65, 0x72, 0xaa, 0x02, 0x07, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -667,7 +785,7 @@ func file_player_proto_rawDescGZIP() []byte {
 	return file_player_proto_rawDescData
 }
 
-var file_player_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_player_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_player_proto_goTypes = []interface{}{
 	(*CSCreateUser)(nil),         // 0: player.CSCreateUser
 	(*SCCreateUser)(nil),         // 1: player.SCCreateUser
@@ -681,11 +799,13 @@ var file_player_proto_goTypes = []interface{}{
 	(*SCSendChatMsg)(nil),        // 9: player.SCSendChatMsg
 	(*ChatMessage)(nil),          // 10: player.ChatMessage
 	(*Test)(nil),                 // 11: player.Test
-	(*attribute.TestImport)(nil), // 12: attribute.TestImport
+	(*PlayerMsgData)(nil),        // 12: player.PlayerMsgData
+	(*PlayerSyncData)(nil),       // 13: player.PlayerSyncData
+	(*attribute.TestImport)(nil), // 14: attribute.TestImport
 }
 var file_player_proto_depIdxs = []int32{
 	10, // 0: player.CSSendChatMsg.msg:type_name -> player.ChatMessage
-	12, // 1: player.Test.t:type_name -> attribute.TestImport
+	14, // 1: player.Test.t:type_name -> attribute.TestImport
 	2,  // [2:2] is the sub-list for method output_type
 	2,  // [2:2] is the sub-list for method input_type
 	2,  // [2:2] is the sub-list for extension type_name
@@ -843,6 +963,30 @@ func file_player_proto_init() {
 				return nil
 			}
 		}
+		file_player_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerMsgData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_player_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PlayerSyncData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -850,7 +994,7 @@ func file_player_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_player_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   12,
+			NumMessages:   14,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

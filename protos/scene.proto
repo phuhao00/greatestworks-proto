@@ -104,3 +104,29 @@ message SCUnitInfoUpdate
 {
   ServerCommon.UnitInfo unit = 1;
 }
+
+message SceneMsgData {
+   uint32  SceneID  = 1;
+   bytes    Data    = 2;
+}
+
+message AoiMsgData  {
+  uint64 MessageId  = 1;
+  bytes  Msg        = 2;
+  bool IncludeSelf  = 3;
+  uint64 PlayerID   = 4;
+}
+
+ message JoinSceneData  {
+  uint32 PreSceneID              =1;   // 前一个场景ID
+  uint32 JumpType                =2;   // 跳转类型
+  uint32 JumpParam               =3;   // 跳转参数
+  uint32 BirthIdx                =4;   // 出生点
+  string NickName                =5;   // 昵称
+  uint32 Model                   =6;   // 颜色
+  float  PosX                    =7;   // X坐标(上次的坐标)
+  float  PosY                    =8;   // Y坐标
+  float  PosZ                    =9;   // Z坐标
+  float  Orientation             =10;  // 面向
+  uint32 VipLv                   =11;  // vip lv
+}

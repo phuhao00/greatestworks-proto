@@ -673,6 +673,14 @@
                 </li>
               
                 <li>
+                  <a href="#player.PlayerMsgData"><span class="badge">M</span>PlayerMsgData</a>
+                </li>
+              
+                <li>
+                  <a href="#player.PlayerSyncData"><span class="badge">M</span>PlayerSyncData</a>
+                </li>
+              
+                <li>
                   <a href="#player.SCAddFriend"><span class="badge">M</span>SCAddFriend</a>
                 </li>
               
@@ -758,6 +766,10 @@
             <ul>
               
                 <li>
+                  <a href="#scene.AoiMsgData"><span class="badge">M</span>AoiMsgData</a>
+                </li>
+              
+                <li>
                   <a href="#scene.CSCanJoinScene"><span class="badge">M</span>CSCanJoinScene</a>
                 </li>
               
@@ -767,6 +779,10 @@
               
                 <li>
                   <a href="#scene.CSLeaveScene"><span class="badge">M</span>CSLeaveScene</a>
+                </li>
+              
+                <li>
+                  <a href="#scene.JoinSceneData"><span class="badge">M</span>JoinSceneData</a>
                 </li>
               
                 <li>
@@ -817,6 +833,10 @@
                   <a href="#scene.SceneHeartbeat"><span class="badge">M</span>SceneHeartbeat</a>
                 </li>
               
+                <li>
+                  <a href="#scene.SceneMsgData"><span class="badge">M</span>SceneMsgData</a>
+                </li>
+              
               
                 <li>
                   <a href="#scene.JoinSceneError"><span class="badge">E</span>JoinSceneError</a>
@@ -834,6 +854,14 @@
               
                 <li>
                   <a href="#ServerCommon.ActionData"><span class="badge">M</span>ActionData</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.BroadcastMsgData"><span class="badge">M</span>BroadcastMsgData</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.GameMsgData"><span class="badge">M</span>GameMsgData</a>
                 </li>
               
                 <li>
@@ -862,6 +890,10 @@
               
                 <li>
                   <a href="#ServerCommon.SCKick"><span class="badge">M</span>SCKick</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.ServerMsgData"><span class="badge">M</span>ServerMsgData</a>
                 </li>
               
                 <li>
@@ -5499,6 +5531,66 @@
 
         
       
+        <h3 id="player.PlayerMsgData">PlayerMsgData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>PlayerID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ServerID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="player.PlayerSyncData">PlayerSyncData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>Data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="player.SCAddFriend">SCAddFriend</h3>
         <p></p>
 
@@ -5890,6 +5982,50 @@
       <p></p>
 
       
+        <h3 id="scene.AoiMsgData">AoiMsgData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>MessageId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Msg</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>IncludeSelf</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>PlayerID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="scene.CSCanJoinScene">CSCanJoinScene</h3>
         <p></p>
 
@@ -6002,6 +6138,99 @@
         <h3 id="scene.CSLeaveScene">CSLeaveScene</h3>
         <p></p>
 
+        
+
+        
+      
+        <h3 id="scene.JoinSceneData">JoinSceneData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>PreSceneID</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>前一个场景ID </p></td>
+                </tr>
+              
+                <tr>
+                  <td>JumpType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>跳转类型 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>JumpParam</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>跳转参数 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>BirthIdx</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>出生点 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>NickName</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>昵称 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Model</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>颜色 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>PosX</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>X坐标(上次的坐标) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>PosY</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>Y坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>PosZ</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>Z坐标 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Orientation</td>
+                  <td><a href="#float">float</a></td>
+                  <td></td>
+                  <td><p>面向 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>VipLv</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p>vip lv </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
         
 
         
@@ -6310,6 +6539,36 @@
 
         
       
+        <h3 id="scene.SceneMsgData">SceneMsgData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>SceneID</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
 
       
         <h3 id="scene.JoinSceneError">JoinSceneError</h3>
@@ -6382,6 +6641,73 @@
                   <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p>参数 </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.BroadcastMsgData">BroadcastMsgData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>MessageId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Msg</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.GameMsgData">GameMsgData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>PlayerID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ServerID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Data</td>
+                  <td><a href="#bytes">bytes</a></td>
+                  <td></td>
+                  <td><p> </p></td>
                 </tr>
               
             </tbody>
@@ -6996,6 +7322,43 @@
                 <tr>
                   <td>contend</td>
                   <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.ServerMsgData">ServerMsgData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>PlayerID</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ServerID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>Data</td>
+                  <td><a href="#bytes">bytes</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>

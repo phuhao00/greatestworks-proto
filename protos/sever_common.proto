@@ -194,4 +194,22 @@ enum ServerRegisterStatus{
   Unknown =2;
 }
 
+message ServerMsgData{
+  uint64 PlayerID =1;
+  string ServerID =2;
+  bytes  Data     =3;
+}
+
+message BroadcastMsgData  {
+  uint64 MessageId =1;
+  bytes  Msg =2;
+}
+
+message GameMsgData  {
+  uint64 PlayerID =1;
+  string ServerID =2;
+  bytes  Data     =3;
+}
+
+
 

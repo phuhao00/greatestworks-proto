@@ -39,3 +39,6 @@ message PGridFloorRect
   PRectInt 	rect		= 7; // 矩形
 }
 
+
+
+
