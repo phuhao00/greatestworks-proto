@@ -43,6 +43,8 @@ func (m *CSPlayerGMCmd) Validate() error {
 
 	// no validation rules for Op
 
+	// no validation rules for ParamStr
+
 	return nil
 }
 
