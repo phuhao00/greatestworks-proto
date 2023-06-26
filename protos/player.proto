@@ -72,3 +72,16 @@ message PlayerSyncData  {
  bytes Data =1;
 }
 
+message PlayerData  {
+
+  uint64  PlayerID  =1;
+  string  GatewayID =2;
+  string  GatewayIp =3;
+  uint32  OpType    =4;
+  string  RemoteIp  =5;
+  uint32  Kick      =6;
+  string  Reason    =7;
+  string  Version   =8;
+  
+}
+
