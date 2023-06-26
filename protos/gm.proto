@@ -4,3 +4,9 @@ package  gm;
 
 option go_package="github.com/phuhao00/greatestworks-proto/gm;gm";
 
+
+message CSPlayerGMCmd
+{
+  uint32 op              = 1;
+ repeated uint32 params  = 2;
+}
