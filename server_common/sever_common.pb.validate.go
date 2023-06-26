@@ -1311,3 +1311,296 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = GameMsgDataValidationError{}
+
+// Validate checks the field values on RegisterToGame with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *RegisterToGame) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Token
+
+	// no validation rules for ServerID
+
+	// no validation rules for ServerType
+
+	// no validation rules for ServerAddr
+
+	// no validation rules for ScrSerType
+
+	// no validation rules for SerRpcAddr
+
+	return nil
+}
+
+// RegisterToGameValidationError is the validation error returned by
+// RegisterToGame.Validate if the designated constraints aren't met.
+type RegisterToGameValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e RegisterToGameValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e RegisterToGameValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e RegisterToGameValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e RegisterToGameValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e RegisterToGameValidationError) ErrorName() string { return "RegisterToGameValidationError" }
+
+// Error satisfies the builtin error interface
+func (e RegisterToGameValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sRegisterToGame.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = RegisterToGameValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = RegisterToGameValidationError{}
+
+// Validate checks the field values on RegisterToGameRet with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *RegisterToGameRet) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Result
+
+	return nil
+}
+
+// RegisterToGameRetValidationError is the validation error returned by
+// RegisterToGameRet.Validate if the designated constraints aren't met.
+type RegisterToGameRetValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e RegisterToGameRetValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e RegisterToGameRetValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e RegisterToGameRetValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e RegisterToGameRetValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e RegisterToGameRetValidationError) ErrorName() string {
+	return "RegisterToGameRetValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e RegisterToGameRetValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sRegisterToGameRet.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = RegisterToGameRetValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = RegisterToGameRetValidationError{}
+
+// Validate checks the field values on CreateGame with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *CreateGame) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for SceneId
+
+	// no validation rules for PlayerId
+
+	// no validation rules for WorldServerId
+
+	// no validation rules for GameType
+
+	// no validation rules for GameId
+
+	// no validation rules for Name
+
+	// no validation rules for Nick
+
+	return nil
+}
+
+// CreateGameValidationError is the validation error returned by
+// CreateGame.Validate if the designated constraints aren't met.
+type CreateGameValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e CreateGameValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e CreateGameValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e CreateGameValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e CreateGameValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e CreateGameValidationError) ErrorName() string { return "CreateGameValidationError" }
+
+// Error satisfies the builtin error interface
+func (e CreateGameValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sCreateGame.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = CreateGameValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = CreateGameValidationError{}
+
+// Validate checks the field values on CreateGameRet with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *CreateGameRet) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Result
+
+	// no validation rules for PlayerId
+
+	return nil
+}
+
+// CreateGameRetValidationError is the validation error returned by
+// CreateGameRet.Validate if the designated constraints aren't met.
+type CreateGameRetValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e CreateGameRetValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e CreateGameRetValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e CreateGameRetValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e CreateGameRetValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e CreateGameRetValidationError) ErrorName() string { return "CreateGameRetValidationError" }
+
+// Error satisfies the builtin error interface
+func (e CreateGameRetValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sCreateGameRet.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = CreateGameRetValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = CreateGameRetValidationError{}

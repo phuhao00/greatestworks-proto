@@ -65,6 +65,9 @@ enum MessageId {
   CSCrossSrvChatMsg     = 70015;
   SCCrossSrvChatMsg     = 70016;
   SCSystemMessage       = 70017;
+  CreateGame            = 70018;
+  CreateGameRet         = 70019;
+  SrvMsgToOnlinePlayer  = 70020;
 
 
   //scene

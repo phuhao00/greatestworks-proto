@@ -212,4 +212,40 @@ message GameMsgData  {
 }
 
 
+message RegisterToGame {
+  string token      = 1;
+  string serverID   = 2;
+  uint32 serverType = 3;
+  string serverAddr = 4;
+  uint32 scrSerType = 5;
+  string serRpcAddr = 6;
+}
+
+message RegisterToGameRet {
+  uint32 result          = 1;
+  repeated uint32 msgIds = 2;
+}
+
+enum GameType{
+  GNone  = 0;
+}
+
+message CreateGame {
+
+  int32 sceneId           = 1;
+  uint64 playerId         = 2;
+  string worldServerId    = 3;
+  GameType gameType       = 4;
+  uint64  gameId          = 5;
+  string   name           = 7;
+  string   nick           = 8;
+
+}
+
+message CreateGameRet {
+  uint32 result   = 1;
+  uint64 playerId = 2;
+}
+
+
 

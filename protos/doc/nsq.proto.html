@@ -889,6 +889,14 @@
                 </li>
               
                 <li>
+                  <a href="#ServerCommon.CreateGame"><span class="badge">M</span>CreateGame</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.CreateGameRet"><span class="badge">M</span>CreateGameRet</a>
+                </li>
+              
+                <li>
                   <a href="#ServerCommon.GameMsgData"><span class="badge">M</span>GameMsgData</a>
                 </li>
               
@@ -906,6 +914,14 @@
               
                 <li>
                   <a href="#ServerCommon.PlayerBaseInfo"><span class="badge">M</span>PlayerBaseInfo</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.RegisterToGame"><span class="badge">M</span>RegisterToGame</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.RegisterToGameRet"><span class="badge">M</span>RegisterToGameRet</a>
                 </li>
               
                 <li>
@@ -947,6 +963,10 @@
               
                 <li>
                   <a href="#ServerCommon.ActionParseType"><span class="badge">E</span>ActionParseType</a>
+                </li>
+              
+                <li>
+                  <a href="#ServerCommon.GameType"><span class="badge">E</span>GameType</a>
                 </li>
               
                 <li>
@@ -5166,6 +5186,24 @@
               </tr>
             
               <tr>
+                <td>CreateGame</td>
+                <td>70018</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>CreateGameRet</td>
+                <td>70019</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SrvMsgToOnlinePlayer</td>
+                <td>70020</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
                 <td>SceneHeartbeat</td>
                 <td>80001</td>
                 <td><p>scene</p></td>
@@ -7040,6 +7078,101 @@
 
         
       
+        <h3 id="ServerCommon.CreateGame">CreateGame</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>sceneId</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>playerId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>worldServerId</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gameType</td>
+                  <td><a href="#ServerCommon.GameType">GameType</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gameId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>nick</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.CreateGameRet">CreateGameRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>playerId</td>
+                  <td><a href="#uint64">uint64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="ServerCommon.GameMsgData">GameMsgData</h3>
         <p></p>
 
@@ -7554,6 +7687,94 @@
 
         
       
+        <h3 id="ServerCommon.RegisterToGame">RegisterToGame</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverID</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serverAddr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>scrSerType</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>serRpcAddr</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
+        <h3 id="ServerCommon.RegisterToGameRet">RegisterToGameRet</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>result</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>msgIds</td>
+                  <td><a href="#uint32">uint32</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+        
+
+        
+      
         <h3 id="ServerCommon.RegisterToGateway">RegisterToGateway</h3>
         <p></p>
 
@@ -8053,6 +8274,23 @@
                 <td>EatDishes</td>
                 <td>2</td>
                 <td><p>吃菜</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+        <h3 id="ServerCommon.GameType">GameType</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>GNone</td>
+                <td>0</td>
+                <td><p></p></td>
               </tr>
             
           </tbody>
