@@ -6,13 +6,58 @@ option go_package="github.com/phuhao00/greatestworks-proto/module;module";
 
 //模块 枚举
 enum Module{
+  //无定义
   undefined   = 0;
+  //商店
   Shop        = 1;
+  //
   Vip         = 2;
+  //排行榜
   Rank        = 3;
+  //任务
   Task        = 4;
+  //好友
   Friend      = 5;
+  //家族
   Family      = 6;
+  //邮件
   Email       = 7;
+  //聊天
   Chat        = 8;
+  //充值
+  Recharge    = 9;
+  //战斗通行证
+  BattlePass  =10;
+  //活动
+  Activity    =11;
+  //合成
+  Synthetise  =12;
+  //技能
+  Skill       =13;
+  //场景
+  Scene       =14;
+  //宠物
+  Pet         =15;
+  //
+  Npc         =16;
+  //小游戏
+  MiniGame    =17;
+  //挂机
+  HangUp      =18;
+  //时装
+  DressUp     =19;
+  //建筑
+  Building    =20;
+  //背包
+  Bag         =21;
+  //头衔
+  Honour      =22;
+  //新手
+  Beginner    =23;
+  //圣物
+  Sacred      =24;
+  //玩家
+  Player      =25;
+  //名字
+  Name        =26;
 }
