@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package  module;
+
+option go_package="github.com/phuhao00/greatestworks-proto/module;module";
+
+//模块 枚举
+enum Module{
+  undefined   = 0;
+  Shop        = 1;
+  Vip         = 2;
+  Rank        = 3;
+  Task        = 4;
+  Friend      = 5;
+  Family      = 6;
+  Email       = 7;
+  Chat        = 8;
+}
